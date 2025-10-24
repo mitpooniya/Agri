@@ -1,31 +1,59 @@
 [
   {
-    "id": "101",
-    "text": "New B.Sc Agriculture syllabus is now available! Check online 🔗 Site",
+    "id": "201",
+    "text": "🌱 Welcome to AGxMIND! This is your one-stop hub for agriculture students. Explore the latest updates, study materials, and agri-sector opportunities. We're dedicated to connecting students with resources that matter — from college notices to ICAR exam prep guides. Stay tuned for more! This text is intentionally long to test the Read more and Read less functionality in the UI.",
     "date": "2025-10-24T09:30:00Z",
-    "hashtags": ["BScAg", "Syllabus"],
+    "hashtags": ["AGxMIND", "Welcome", "BScAg", "Education", "Updates"],
     "links": [
-      {
-        "url": "https://example.com/bsc_ag_syllabus",
-        "text": "Good"
-      }
+      { "text": "Visit AGxMIND", "url": "https://example.com/agxmind" },
+      { "text": "Join Telegram", "url": "https://t.me/agxmind" }
     ]
   },
   {
-    "id": "102",
-    "text": "ICAR has released new research assistant job notifications. Apply soon!
-    shshkkskskmsmsmsnsnndndndndjdjdjdjdjdjjsjshshsjsjdhdh
-    jzjshscsnsgnsgjdndjdkd
-    dnsjkdjsjsksnsndmsk
-    dnsnjdnsksjsjshjsjshxnsndnksjdksksjdjdndnndndndbdndndndjdh
-    🔗 Site",
+    "id": "202",
+    "text": "🚜 ICAR has announced the 2025 Junior Research Fellowship (JRF) examination schedule! Students are advised to prepare according to the latest syllabus and pattern released on the official portal.",
     "date": "2025-10-23T15:45:00Z",
-    "hashtags": ["ICAR", "Jobs","Shgsg","dhsgsghsks","djdhdgdktf"],
+    "hashtags": ["ICAR", "JRF", "ExamUpdate"],
     "links": [
-      {
-        "url": "https://example.com/icar_job_details",
-        "text": "Site"
-      }
+      { "text": "Official Notice", "url": "https://example.com/icar_jrf_notice" }
+    ]
+  },
+  {
+    "id": "203",
+    "text": "🌾 The new B.Sc Agriculture syllabus for 2025 is now available. It includes revisions in Crop Production, Soil Science, and Agri Economics subjects. Download and review the changes carefully before your next semester begins.",
+    "date": "2025-10-22T11:00:00Z",
+    "hashtags": ["BScAg", "Syllabus", "Education"],
+    "links": [
+      { "text": "Download Syllabus", "url": "https://example.com/bsc_ag_syllabus_2025" },
+      { "text": "View Subject Changes", "url": "https://example.com/subject_changes" }
+    ]
+  },
+  {
+    "id": "204",
+    "text": "🌿 Webinar Alert: Join the upcoming session on 'Climate-Smart Agriculture' hosted by leading ICAR scientists. Learn about sustainable practices and the latest technological innovations reshaping the agri landscape.",
+    "date": "2025-10-21T18:00:00Z",
+    "hashtags": ["Webinar", "ICAR", "ClimateSmartAgri", "Sustainability"],
+    "links": [
+      { "text": "Register Now", "url": "https://example.com/webinar_register" }
+    ]
+  },
+  {
+    "id": "205",
+    "text": "📢 Results Declared! Semester 3 results for B.Sc Agriculture are now live. Students can check their scores on the university’s result portal. Congratulations to all achievers!",
+    "date": "2025-10-20T08:15:00Z",
+    "hashtags": ["Results", "BScAg", "Exam"],
+    "links": [
+      { "text": "Check Results", "url": "https://example.com/semester3_results" }
+    ]
+  },
+  {
+    "id": "206",
+    "text": "🌻 Agri News Update: The government is introducing new subsidies for organic farming. These incentives will support small and medium-scale farmers to transition to eco-friendly agriculture practices. Further details to follow soon.",
+    "date": "2025-10-19T10:45:00Z",
+    "hashtags": ["AgriNews", "OrganicFarming", "Subsidy"],
+    "links": [
+      { "text": "Policy Details", "url": "https://example.com/organic_policy" },
+      { "text": "Apply for Subsidy", "url": "https://example.com/apply_subsidy" }
     ]
   }
-]
+        ]
