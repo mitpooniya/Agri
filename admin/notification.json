@@ -1,0 +1,32 @@
+[
+  {
+    "text": "New B.Sc Agriculture syllabus is now available for download! Make sure to check your course updates. #BScAg #Syllabus",
+    "date": "2025-10-24T09:30:00Z",
+    "documents": ["https://example.com/bsc_ag_syllabus.pdf"],
+    "hashtags": ["BScAg", "Syllabus"]
+  },
+  {
+    "text": "ICAR has released new research assistant job notifications. Apply before the deadline! #ICAR #Jobs",
+    "date": "2025-10-23T15:45:00Z",
+    "documents": ["https://example.com/icar_job_details.pdf"],
+    "hashtags": ["ICAR", "Jobs"]
+  },
+  {
+    "text": "Farmers’ awareness webinar on sustainable practices this weekend. Register now! #Farming #Webinar",
+    "date": "2025-10-22T12:00:00Z",
+    "documents": [],
+    "hashtags": ["Farming", "Webinar"]
+  },
+  {
+    "text": "Exam results for semester 3 are published. Check your scores online. #Results #BScAg",
+    "date": "2025-10-21T18:00:00Z",
+    "documents": ["https://example.com/semester3_results.pdf"],
+    "hashtags": ["Results", "BScAg"]
+  },
+  {
+    "text": "Agriculture sector news: New irrigation techniques being adopted nationwide. #AgriNews #Innovation",
+    "date": "2025-10-20T08:15:00Z",
+    "documents": [],
+    "hashtags": ["AgriNews", "Innovation"]
+  }
+    ]
