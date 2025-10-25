@@ -1,68 +1,58 @@
 [
   {
-    "id": "301",
-    "text": "🌱 Welcome to AGxMIND — your one-stop hub for agriculture students! Explore the latest updates, study materials, and agri-sector opportunities. We're dedicated to connecting students with resources that matter — from college notices to ICAR exam prep guides. This message is intentionally long so you can test the Read more and Read less functionality. Keep scrolling for hashtags, sharing, and site buttons in action!",
-    "date": "2025-10-24T09:30:00Z",
-    "hashtags": ["AGxMIND", "Welcome", "BScAg", "Education", "Updates", "Agriculture", "Students"],
-    "links": [
-      { "text": "Visit Official Site", "url": "https://example.com/agxmind" },
-      { "text": "Join Telegram", "url": "https://t.me/agxmind" },
-      { "text": "Read Blog", "url": "https://example.com/blog" }
-    ]
+    "id": "N001",
+    "text": "🌾 Exciting update! ICAR has released new guidelines for B.Sc Agriculture admissions 2025. Check the official notice for more details. 📚\n\nThis update includes revised eligibility criteria and new course structures. Stay prepared, future agri professionals! 🚜",
+    "hashtags": ["#ICAR", "#Admissions", "#AgriEducation"],
+    "links": ["https://icar.org.in/", "https://education.agxmind.in/updates"],
+    "date": "2025-10-24T08:30:00Z"
   },
   {
-    "id": "302",
-    "text": "🚜 ICAR 2025 JRF examination schedule released! Prepare according to the latest syllabus and new pattern. Don’t forget to download the sample papers for your subject area.",
-    "date": "2025-10-23T15:45:00Z",
-    "hashtags": ["ICAR", "JRF", "ExamUpdate", "AgricultureExam"],
-    "links": [
-      { "text": "Official Notice", "url": "https://example.com/icar_jrf_notice" },
-      { "text": "Sample Papers", "url": "https://example.com/sample_papers" }
-    ]
+    "id": "N002",
+    "text": "🍅 Krishi Vigyan Kendra has announced a new training program on sustainable tomato farming. Learn modern cultivation practices, pest management, and marketing strategies. 👩‍🌾\n\nApply soon — limited seats available!",
+    "hashtags": ["#Training", "#KVK", "#Sustainability"],
+    "links": ["https://kvktraining.gov.in/apply"],
+    "date": "2025-10-23T10:00:00Z"
   },
   {
-    "id": "303",
-    "text": "🌾 The B.Sc Agriculture syllabus for 2025 is now available! It includes major revisions in Crop Production, Soil Science, and Agri Economics. Review changes carefully before the next semester begins.",
-    "date": "2025-10-22T11:00:00Z",
-    "hashtags": ["BScAg", "Syllabus", "Education", "Update", "ICAR"],
-    "links": [
-      { "text": "Download PDF", "url": "https://example.com/bsc_ag_syllabus_2025" },
-      { "text": "View Subject Changes", "url": "https://example.com/subject_changes" }
-    ]
+    "id": "N003",
+    "text": "🌱 Agri Expo 2025 is coming this December! A great opportunity for students and professionals to network and explore agri innovations. 🤝\n\nVenue: Delhi Agricultural Fair Grounds.\nDates: Dec 10–12, 2025.",
+    "hashtags": ["#AgriExpo", "#Networking", "#Innovation"],
+    "links": ["https://expo.agxmind.in/"],
+    "date": "2025-09-15T09:00:00Z"
   },
   {
-    "id": "304",
-    "text": "🌿 Webinar Alert: Join the upcoming session on 'Climate-Smart Agriculture' hosted by ICAR experts. Learn about sustainable practices and innovations reshaping the agricultural landscape.",
-    "date": "2025-10-21T18:00:00Z",
-    "hashtags": ["Webinar", "ICAR", "ClimateSmartAgri", "Sustainability", "Innovation"],
-    "links": [
-      { "text": "Register Now", "url": "https://example.com/webinar_register" }
-    ]
+    "id": "N004",
+    "text": "📘 New note uploaded: ‘Soil Science — Unit 3’. Includes essential topics like soil texture, structure, and fertility management. 🌍\n\nPerfect for 3rd semester students preparing for mid-term exams!",
+    "hashtags": ["#Notes", "#SoilScience", "#StudyMaterial"],
+    "links": ["https://agxmind.great-site.net/notes/soil-unit3.pdf"],
+    "date": "2025-10-21T14:45:00Z"
   },
   {
-    "id": "305",
-    "text": "📢 Results Declared! Semester 3 results for B.Sc Agriculture are now live. Congratulations to all achievers — and best of luck to those preparing for next semester exams!",
-    "date": "2025-10-20T08:15:00Z",
-    "hashtags": ["Results", "BScAg", "Exam", "Education", "Students"],
-    "links": [
-      { "text": "Check Results", "url": "https://example.com/semester3_results" }
-    ]
+    "id": "N005",
+    "text": "🚀 Huge Announcement! 🌾 ‘Agri Minds of Tomorrow’ scholarship applications are now open! 🎓\n\nGet up to ₹50,000 for your agriculture education.\nEligibility: Students from any recognized agri college.\n\nHurry, apply before November 10th!",
+    "hashtags": ["#Scholarship", "#EducationSupport", "#AgriStudents"],
+    "links": ["https://scholarships.agxmind.in/apply", "https://www.icar.org.in/"],
+    "date": "2025-10-19T11:20:00Z"
   },
   {
-    "id": "306",
-    "text": "🌻 Agri News Update: The government introduces new subsidies for organic farming. These incentives support small and medium-scale farmers to adopt eco-friendly practices. Stay tuned for further updates soon!",
-    "date": "2025-10-19T10:45:00Z",
-    "hashtags": ["AgriNews", "OrganicFarming", "Subsidy", "Farmers"],
-    "links": [
-      { "text": "Policy Details", "url": "https://example.com/organic_policy" },
-      { "text": "Apply for Subsidy", "url": "https://example.com/apply_subsidy" }
-    ]
+    "id": "N006",
+    "text": "📢 Job Alert! The Agriculture Department is hiring field officers. 👨‍🌾\n\nEligibility: B.Sc Agri graduates.\nSalary: ₹35,000/month + allowances.\nApply online — great opportunity to begin your career in the agri sector! 💼",
+    "hashtags": ["#Jobs", "#AgriCareer", "#FieldOfficer"],
+    "links": ["https://jobs.agriculture.gov.in/apply"],
+    "date": "2025-10-17T09:00:00Z"
   },
   {
-    "id": "307",
-    "text": "🌾 Quick Reminder: Submit your Crop Management assignment before October 30 to avoid late penalties.",
-    "date": "2025-10-18T09:00:00Z",
-    "hashtags": ["Reminder", "Assignments", "CropManagement"],
-    "links": []
+    "id": "N007",
+    "text": "🌻 Research Update: Scientists discovered a new drought-resistant sunflower variety! 🌞\n\nThis innovation is expected to increase yield by 25% under low-water conditions.\nRead the full paper and explore the potential for sustainable farming. 📖",
+    "hashtags": ["#Research", "#Innovation", "#Sunflower"],
+    "links": ["https://research.agxmind.in/sunflower2025"],
+    "date": "2025-10-10T07:00:00Z"
+  },
+  {
+    "id": "N008",
+    "text": "🧪 Lab Notice: Practical exam schedule for Plant Pathology released. 🧬\n\nCheck your department notice board or official site for the full timetable.",
+    "hashtags": ["#Exam", "#PlantPathology", "#LabNotice"],
+    "links": ["https://college.agxmind.in/exams"],
+    "date": "2025-10-24T04:30:00Z"
   }
 ]
