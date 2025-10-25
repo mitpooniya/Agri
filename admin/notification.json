@@ -1,58 +1,30 @@
 [
   {
     "id": "N001",
-    "text": "🌾 Exciting update! ICAR has released new guidelines for B.Sc Agriculture admissions 2025. Check the official notice for more details. 📚\n\nThis update includes revised eligibility criteria and new course structures. Stay prepared, future agri professionals! 🚜",
+    "text": "🌾 Exciting update! ICAR has released new guidelines for B.Sc Agriculture admissions 2025. 📚 Stay prepared, future agri professionals! 🚜",
     "hashtags": ["#ICAR", "#Admissions", "#AgriEducation"],
-    "links": ["https://icar.org.in/", "https://education.agxmind.in/updates"],
-    "date": "2025-10-24T08:30:00Z"
+    "links": [
+      { "title": "ICAR Official Website", "url": "https://icar.org.in/" },
+      { "title": "AGxMIND Updates", "url": "https://education.agxmind.in/updates" }
+    ],
+    "date": 1735036800000
   },
   {
     "id": "N002",
-    "text": "🍅 Krishi Vigyan Kendra has announced a new training program on sustainable tomato farming. Learn modern cultivation practices, pest management, and marketing strategies. 👩‍🌾\n\nApply soon — limited seats available!",
+    "text": "👩‍🌾 Krishi Vigyan Kendra has announced a new training program on sustainable tomato farming! 🍅 Learn modern cultivation practices and marketing strategies.",
     "hashtags": ["#Training", "#KVK", "#Sustainability"],
-    "links": ["https://kvktraining.gov.in/apply"],
-    "date": "2025-10-23T10:00:00Z"
+    "links": [
+      { "title": "KVK Apply Page", "url": "https://kvktraining.gov.in/apply" }
+    ],
+    "date": 1734888000000
   },
   {
     "id": "N003",
-    "text": "🌱 Agri Expo 2025 is coming this December! A great opportunity for students and professionals to network and explore agri innovations. 🤝\n\nVenue: Delhi Agricultural Fair Grounds.\nDates: Dec 10–12, 2025.",
+    "text": "🚀 Agri Expo 2025 is coming this December! 🤝 Join to explore innovations and network with professionals. 🌱",
     "hashtags": ["#AgriExpo", "#Networking", "#Innovation"],
-    "links": ["https://expo.agxmind.in/"],
-    "date": "2025-09-15T09:00:00Z"
-  },
-  {
-    "id": "N004",
-    "text": "📘 New note uploaded: ‘Soil Science — Unit 3’. Includes essential topics like soil texture, structure, and fertility management. 🌍\n\nPerfect for 3rd semester students preparing for mid-term exams!",
-    "hashtags": ["#Notes", "#SoilScience", "#StudyMaterial"],
-    "links": ["https://agxmind.great-site.net/notes/soil-unit3.pdf"],
-    "date": "2025-10-21T14:45:00Z"
-  },
-  {
-    "id": "N005",
-    "text": "🚀 Huge Announcement! 🌾 ‘Agri Minds of Tomorrow’ scholarship applications are now open! 🎓\n\nGet up to ₹50,000 for your agriculture education.\nEligibility: Students from any recognized agri college.\n\nHurry, apply before November 10th!",
-    "hashtags": ["#Scholarship", "#EducationSupport", "#AgriStudents"],
-    "links": ["https://scholarships.agxmind.in/apply", "https://www.icar.org.in/"],
-    "date": "2025-10-19T11:20:00Z"
-  },
-  {
-    "id": "N006",
-    "text": "📢 Job Alert! The Agriculture Department is hiring field officers. 👨‍🌾\n\nEligibility: B.Sc Agri graduates.\nSalary: ₹35,000/month + allowances.\nApply online — great opportunity to begin your career in the agri sector! 💼",
-    "hashtags": ["#Jobs", "#AgriCareer", "#FieldOfficer"],
-    "links": ["https://jobs.agriculture.gov.in/apply"],
-    "date": "2025-10-17T09:00:00Z"
-  },
-  {
-    "id": "N007",
-    "text": "🌻 Research Update: Scientists discovered a new drought-resistant sunflower variety! 🌞\n\nThis innovation is expected to increase yield by 25% under low-water conditions.\nRead the full paper and explore the potential for sustainable farming. 📖",
-    "hashtags": ["#Research", "#Innovation", "#Sunflower"],
-    "links": ["https://research.agxmind.in/sunflower2025"],
-    "date": "2025-10-10T07:00:00Z"
-  },
-  {
-    "id": "N008",
-    "text": "🧪 Lab Notice: Practical exam schedule for Plant Pathology released. 🧬\n\nCheck your department notice board or official site for the full timetable.",
-    "hashtags": ["#Exam", "#PlantPathology", "#LabNotice"],
-    "links": ["https://college.agxmind.in/exams"],
-    "date": "2025-10-24T04:30:00Z"
+    "links": [
+      { "title": "Expo Official Page", "url": "https://expo.agxmind.in/" }
+    ],
+    "date": 1734715200000
   }
 ]
