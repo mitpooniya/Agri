@@ -1,0 +1,21 @@
+{
+  "customers": [
+    {
+      "id": "_qsfs2p66t",
+      "firstName": "Kvg",
+      "lastName": "Bhhh",
+      "amount": 996,
+      "village": "Mothli",
+      "date": "2025-10-19",
+      "paymentDone": false
+    }
+  ],
+  "history": [
+    {
+      "userId": "_qsfs2p66t",
+      "type": "User Creation",
+      "message": "User created with amount 996 and village Mothli",
+      "timestamp": "2025-10-25T17:04:23.179Z"
+    }
+  ]
+}
