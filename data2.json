@@ -7,7 +7,7 @@
       "amount": 995,
       "village": "Mothli",
       "date": "2025-10-19",
-      "paymentDone": true
+      "paymentDone": false
     }
   ],
   "history": [
@@ -28,6 +28,12 @@
       "type": "Payment Status Change",
       "message": "Payment Status changed to DONE",
       "timestamp": "2025-10-25T17:05:14.777Z"
+    },
+    {
+      "userId": "_qsfs2p66t",
+      "type": "Payment Status Change",
+      "message": "Payment Status changed to PENDING",
+      "timestamp": "2025-10-25T17:05:57.872Z"
     }
   ]
 }
