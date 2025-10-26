@@ -16,7 +16,7 @@
       "amount": 3500,
       "village": "Mandoli",
       "date": "2025-10-18",
-      "paymentDone": false
+      "paymentDone": true
     },
     {
       "id": "_evv4w3er2",
@@ -130,6 +130,12 @@
       "type": "User Creation",
       "message": "User created with amount 678 and village Other",
       "timestamp": "2025-10-26T09:39:03.365Z"
+    },
+    {
+      "userId": "_89gwclrif",
+      "type": "Payment Status Change",
+      "message": "Payment Status changed to DONE",
+      "timestamp": "2025-10-26T10:00:24.520Z"
     }
   ]
 }
