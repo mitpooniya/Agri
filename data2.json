@@ -8,6 +8,15 @@
       "village": "Mothli",
       "date": "2025-10-19",
       "paymentDone": false
+    },
+    {
+      "id": "_89gwclrif",
+      "firstName": "Hxg",
+      "lastName": "Cctv",
+      "amount": 3500,
+      "village": "Mandoli",
+      "date": "2025-10-18",
+      "paymentDone": false
     }
   ],
   "history": [
@@ -34,6 +43,12 @@
       "type": "Payment Status Change",
       "message": "Payment Status changed to PENDING",
       "timestamp": "2025-10-25T17:05:57.872Z"
+    },
+    {
+      "userId": "_89gwclrif",
+      "type": "User Creation",
+      "message": "User created with amount 3500 and village Mandoli",
+      "timestamp": "2025-10-26T08:07:19.102Z"
     }
   ]
 }
