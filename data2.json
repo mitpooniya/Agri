@@ -7,7 +7,7 @@
       "amount": 995,
       "village": "Mothli",
       "date": "2025-10-19",
-      "paymentDone": false
+      "paymentDone": true
     },
     {
       "id": "_89gwclrif",
@@ -49,6 +49,12 @@
       "type": "User Creation",
       "message": "User created with amount 3500 and village Mandoli",
       "timestamp": "2025-10-26T08:07:19.102Z"
+    },
+    {
+      "userId": "_qsfs2p66t",
+      "type": "Payment Status Change",
+      "message": "Payment Status changed to DONE",
+      "timestamp": "2025-10-26T08:27:48.184Z"
     }
   ]
 }
