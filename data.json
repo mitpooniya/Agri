@@ -24,7 +24,7 @@
       "lastName": "Sbsbn",
       "amount": 688,
       "village": "Kalana",
-      "date": "2025-10-21",
+      "date": "2025-10-22",
       "paymentDone": false
     }
   ],
@@ -52,6 +52,12 @@
       "type": "Payment Status Change",
       "message": "Payment Status changed to DONE",
       "timestamp": "2025-10-28T17:03:54.279Z"
+    },
+    {
+      "userId": "_iq3eggq11",
+      "type": "User Update",
+      "message": "Date changed from 2025-10-21 to 2025-10-22",
+      "timestamp": "2025-10-28T17:04:12.521Z"
     }
   ]
 }
