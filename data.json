@@ -1,0 +1,21 @@
+{
+  "customers": [
+    {
+      "id": "_ubuo4axvj",
+      "firstName": "Sak",
+      "lastName": "Shsh",
+      "amount": 464,
+      "village": "Dungrana",
+      "date": "2025-10-22",
+      "paymentDone": false
+    }
+  ],
+  "history": [
+    {
+      "userId": "_ubuo4axvj",
+      "type": "User Creation",
+      "message": "User created with amount 464 and village Dungrana",
+      "timestamp": "2025-10-28T16:32:56.907Z"
+    }
+  ]
+}
