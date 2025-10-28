@@ -35,6 +35,15 @@
       "village": "Rakhi",
       "date": "2025-10-22",
       "paymentDone": false
+    },
+    {
+      "id": "_6x703px00",
+      "firstName": "Hf",
+      "lastName": "Hd",
+      "amount": 200,
+      "village": "Rakhi",
+      "date": "2025-10-28",
+      "paymentDone": false
     }
   ],
   "history": [
@@ -79,6 +88,12 @@
       "type": "Payment Status Change",
       "message": "Payment Status changed to PENDING",
       "timestamp": "2025-10-28T18:10:23.143Z"
+    },
+    {
+      "userId": "_6x703px00",
+      "type": "User Creation",
+      "message": "User created with amount 200 and village Rakhi",
+      "timestamp": "2025-10-28T18:12:02.342Z"
     }
   ]
 }
