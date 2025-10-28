@@ -26,6 +26,15 @@
       "village": "Kalana",
       "date": "2025-10-22",
       "paymentDone": false
+    },
+    {
+      "id": "_uq70ivicu",
+      "firstName": "Djdh",
+      "lastName": "Nsnsj",
+      "amount": 9459,
+      "village": "Rakhi",
+      "date": "2025-10-22",
+      "paymentDone": false
     }
   ],
   "history": [
@@ -58,6 +67,12 @@
       "type": "User Update",
       "message": "Date changed from 2025-10-21 to 2025-10-22",
       "timestamp": "2025-10-28T17:04:12.521Z"
+    },
+    {
+      "userId": "_uq70ivicu",
+      "type": "User Creation",
+      "message": "User created with amount 9459 and village Rakhi",
+      "timestamp": "2025-10-28T17:04:28.789Z"
     }
   ]
 }
