@@ -53,6 +53,15 @@
       "village": "Rakhi",
       "date": "2025-10-28",
       "paymentDone": false
+    },
+    {
+      "id": "_6hvica5r1",
+      "firstName": "Kg",
+      "lastName": "Nh",
+      "amount": 988,
+      "village": "Gunjasari",
+      "date": "2025-10-30",
+      "paymentDone": false
     }
   ],
   "history": [
@@ -121,6 +130,12 @@
       "type": "Payment Status Change",
       "message": "Payment Status changed to DONE",
       "timestamp": "2025-10-29T05:39:48.886Z"
+    },
+    {
+      "userId": "_6hvica5r1",
+      "type": "User Creation",
+      "message": "User created with amount 988 and village Gunjasari",
+      "timestamp": "2025-10-29T05:43:40.899Z"
     }
   ]
 }
