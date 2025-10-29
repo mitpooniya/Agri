@@ -44,6 +44,15 @@
       "village": "Rakhi",
       "date": "2025-10-28",
       "paymentDone": false
+    },
+    {
+      "id": "_z90vyxk3z",
+      "firstName": "Sjsj",
+      "lastName": "Jzj",
+      "amount": 949,
+      "village": "Rakhi",
+      "date": "2025-10-28",
+      "paymentDone": false
     }
   ],
   "history": [
@@ -100,6 +109,12 @@
       "type": "Payment Status Change",
       "message": "Payment Status changed to DONE",
       "timestamp": "2025-10-29T05:31:47.027Z"
+    },
+    {
+      "userId": "_z90vyxk3z",
+      "type": "User Creation",
+      "message": "User created with amount 949 and village Rakhi",
+      "timestamp": "2025-10-29T05:39:37.673Z"
     }
   ]
 }
