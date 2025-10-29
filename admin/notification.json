@@ -1,35 +1,78 @@
 [
   {
-    "id": "N001",
-    "text": "🌾 Exciting update! ICAR has released new guidelines for B.Sc Agriculture admissions 2025. 📚 Stay prepared, future agri professionals! 🚜\n\nThis notice includes important changes to eligibility, updated credit system, and new course structures for B.Sc Agri programs. Students are advised to review all details carefully before applying.\n\nThe syllabus now emphasizes on agri-tech, climate-smart agriculture 🌱 and entrepreneurship. Make sure to download the official document and prepare your documents accordingly.\n\nMore updates will follow soon! 🎓",
-    "hashtags": ["#ICAR", "#Admissions", "#AgriEducation"],
+    "id": "N17617383392709259",
+    "text": "Registration for B.Sc. (THIRD YEAR SECOND SEMESTER) for the Academic Session 2024–25 is now open at Agriculture University, Kota.\n**Important Dates:**\nStart Date: 17 October 2025\nLast Date (with fine): 30 October 2025\nStudents should complete registration within the specified dates to avoid late fees.",
+    "hashtags": [
+      "#Registration",
+      "#AUKota"
+    ],
     "links": [
-      { "title": "ICAR Official Website", "url": "https://icar.org.in/" },
-      { "title": "AGxMIND Updates", "url": "https://education.agxmind.in/updates" }
+      {
+        "title": "Agriculture University, Kota Official Website",
+        "url": "https://aukota.org/"
+      }
+    ],
+    "date": 1761696000000
+  },
+  {
+    "id": "N001",
+    "text": "ð¾ Exciting update! ICAR has released new guidelines for B.Sc Agriculture admissions 2025. ð Stay prepared, future agri professionals! ð\n\nThis notice includes important changes to eligibility, updated credit system, and new course structures for B.Sc Agri programs. Students are advised to review all details carefully before applying.\n\nThe syllabus now emphasizes on agri-tech, climate-smart agriculture ð± and entrepreneurship. Make sure to download the official document and prepare your documents accordingly.\n\nMore updates will follow soon! ð",
+    "hashtags": [
+      "#ICAR",
+      "#Admissions",
+      "#AgriEducation"
+    ],
+    "links": [
+      {
+        "title": "ICAR Official Website",
+        "url": "https://icar.org.in/"
+      },
+      {
+        "title": "AGxMIND Updates",
+        "url": "https://education.agxmind.in/updates"
+      }
     ],
     "date": 1735036800000
   },
   {
     "id": "N002",
-    "text": "👩‍🌾 Krishi Vigyan Kendra has announced a new training program on sustainable tomato farming! 🍅 Learn modern cultivation, pest control, water-efficient systems, and marketing strategies. The training also covers modern hydroponics techniques.\n\nApply soon — limited seats available. 🧑‍🌾",
-    "hashtags": ["#Training", "#KVK", "#Sustainability"],
+    "text": "ð©âð¾ Krishi Vigyan Kendra has announced a new training program on sustainable tomato farming! ð Learn modern cultivation, pest control, water-efficient systems, and marketing strategies. The training also covers modern hydroponics techniques.\n\nApply soon â limited seats available. ð§âð¾",
+    "hashtags": [
+      "#Training",
+      "#KVK",
+      "#Sustainability"
+    ],
     "date": 1734888000000
   },
   {
     "id": "N003",
-    "text": "🚀 Agri Expo 2025 is coming this December! 🤝 Join to explore innovations, connect with companies, and meet agri scientists from across India.\n\nWorkshops, live demos, and product launches await! 🌱",
-    "hashtags": ["#AgriExpo", "#Networking", "#Innovation"],
+    "text": "ð Agri Expo 2025 is coming this December! ð¤ Join to explore innovations, connect with companies, and meet agri scientists from across India.\n\nWorkshops, live demos, and product launches await! ð±",
+    "hashtags": [
+      "#AgriExpo",
+      "#Networking",
+      "#Innovation"
+    ],
     "links": [
-      { "title": "Expo Official Page", "url": "https://expo.agxmind.in/" }
+      {
+        "title": "Expo Official Page",
+        "url": "https://expo.agxmind.in/"
+      }
     ],
     "date": 1734715200000
   },
   {
     "id": "N004",
-    "text": "📘 New notes uploaded: ‘Soil Science — Unit 3’. This includes key concepts like soil texture, structure, and fertility management. 🌍 Perfect for 3rd semester students preparing for mid-term exams.\n\nThe unit also contains solved numericals and previous-year questions for better understanding.",
-    "hashtags": ["#Notes", "#SoilScience", "#StudyMaterial"],
+    "text": "ð New notes uploaded: âSoil Science â Unit 3â. This includes key concepts like soil texture, structure, and fertility management. ð Perfect for 3rd semester students preparing for mid-term exams.\n\nThe unit also contains solved numericals and previous-year questions for better understanding.",
+    "hashtags": [
+      "#Notes",
+      "#SoilScience",
+      "#StudyMaterial"
+    ],
     "links": [
-      { "title": "View Notes", "url": "https://agxmind.great-site.net/notes/soil-unit3.pdf" }
+      {
+        "title": "View Notes",
+        "url": "https://agxmind.great-site.net/notes/soil-unit3.pdf"
+      }
     ],
     "date": 1734528000000
   }
