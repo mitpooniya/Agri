@@ -1,0 +1,7 @@
+{
+  "reserved": [
+    "ADMIN",
+    "DEFAULT",
+    "LIST"
+  ]
+}
