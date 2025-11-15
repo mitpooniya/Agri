@@ -55,10 +55,12 @@
     "Uploader": "MIT",
     "UploaderProfile": "https://ui-avatars.com/api/?name=undefined",
     "Hastags": [
-      "Udjdj ×",
-      "Snsn ×"
+      "Udjdj Ã",
+      "Snsn Ã"
     ],
-    "Likes": [],
+    "Likes": [
+      "MIT"
+    ],
     "Time": 1763200640229
   }
 }
