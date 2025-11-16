@@ -50,7 +50,9 @@
     "Uploader": "MIT",
     "UploaderProfile": "https://ui-avatars.com/api/?name=undefined",
     "Hastags": "",
-    "Likes": [],
+    "Likes": [
+      "MIT"
+    ],
     "Time": 1763123292480
   },
   "ko2384": {
