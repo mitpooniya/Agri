@@ -12,12 +12,6 @@
     "content": "One of your submitted documents has https://accounts.spotify.com/hi/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%2F been approved successfully."
   },
   "n003": {
-    "title": "New Feature Added: PDF Viewer",
-    "category": "System",
-    "time": 1732300000000,
-    "content": "We added a fast and clean PDF viewer to the platform."
-  },
-  "n003": {
     "title": "New Farmingheme Released",
     "category": "Governmen86t",
     "time": 1732284600000,
@@ -34,6 +28,11 @@
     "category": "Sysiyem",
     "time": 1732300000000,
     "content": "We added a fast and clean PDF viewer to the platform."
+  },
+  "n1763835800035": {
+    "title": "Your Document Was Approved",
+    "content": "One of your submitted documents has https://accounts.spotify.com/hi/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%2F been approved successfully.",
+    "category": "Alert",
+    "time": 1763835800036
   }
-
 }
