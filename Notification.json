@@ -25,9 +25,9 @@
   },
   "n1763835800035": {
     "title": "Your Document Was Approved",
-    "content": "One of your submitted documents has https://accounts.spotify.com/hi/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%2F been approved successfully.\n  <div style=\"margin-top:8px;display:flex;gap:8px;align-items:center\">\n      <button id=\"btnAddCategory\" class=\"btn ghost\">+ Add category</button>\n      \n    </div>",
+    "content": "One of your submitted documents has https://accounts.spotify.com/hi/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%2F been approved successfully.",
     "category": "Alert",
-    "time": 1763886622538
+    "time": 1763887404677
   },
   "gcgy5k": {
     "title": "New chat with beautiful",
