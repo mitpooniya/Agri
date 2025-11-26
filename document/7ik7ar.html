@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile — Documents</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{--brand:#1976d2;--muted:#6b7280;--card:#fff;--bg:#f6f9ff;--text:#111}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui,-apple-system,"Segoe UI",Roboto;background:var(--bg);color:var(--text)}
+    header{height:64px;display:flex;align-items:center;padding:0 16px;background:#fff;box-shadow:0 6px 18px rgba(14,28,63,0.06);position:sticky;top:0;z-index:40}
+    #backBtn{background:none;border:none;cursor:pointer;color:var(--brand);display:flex;align-items:center}
+    #pageTitle{font-weight:600;margin-left:10px}
+    .container{padding:16px}
+    .profile-card{background:#fff;border-radius:12px;padding:16px;display:flex;gap:16px;align-items:center;box-shadow:0 8px 30px rgba(14,28,63,0.06)}
+    #profilePic{width:96px;height:96px;border-radius:12px;background:#eee;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;overflow:hidden;flex-shrink:0}
+    #profilePic img{width:100%;height:100%;object-fit:cover}
+    .profile-meta{flex:1;min-width:0}
+    .profile-name{font-size:18px;font-weight:700;margin-bottom:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .profile-username{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .profile-bio{font-size:14px;color:var(--muted);margin-bottom:8px;min-height:38px}
+.profile-stats{ display: flex;
+  gap:20px;font-size:15px;color:var(--muted);align-items:center}
+#statAge, #statFiles {
+  background: wheat;
+  width:50px;height:50px;border-radius:8px;background:#eee;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;overflow:hidden;flex-shrink:0
+}
+    #saveUserBtn{background:none;border:1px solid #e6eefc;padding:6px 8px;border-radius:8px;cursor:pointer;color:var(--brand);display:none}
+    .private-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .private-item{background:#fff;padding:10px;border-radius:10px;flex:1;min-width:160px;cursor:pointer;border:1px solid transparent}
+    .private-item:hover{border-color:#e6eefc}
+    main{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+    .file-card{display:flex;justify-content:space-between;gap:12px;background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(14,28,63,0.04);position:relative}
+    .left{display:flex;gap:12px;min-width:0;align-items:flex-start}
+    .file-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:#f1f7ff;color:var(--brand);flex-shrink:0}
+    .meta{min-width:0;flex:1}
+    .meta h3{margin:0;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .uploader-row{display:flex;align-items:center;gap:8px;margin-top:8px;cursor:pointer;color:var(--brand);font-size:13px}
+    .uploader-row small{
+      color: gray;
+    }
+    .tags{display:flex;gap:8px;margin-top:8px;overflow:auto}
+    .tag{white-space:nowrap;padding:6px 10px;background:#eaf4ff;border-radius:999px;color:var(--brand);cursor:pointer;font-size:12px}
+    .actions{display:flex;flex-direction:column;gap:8px;align-items:center;margin-left:8px}
+    .actions button{background:none;border:none;cursor:pointer;padding:6px;border-radius:8px}
+    .like-count{font-size:12px;color:var(--muted)}
+    .time{font-size:12px;color:var(--muted);position:absolute;left:12px;bottom:10px}
+    .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,0.36);display:none;align-items:center;justify-content:center;z-index:60}
+    .modal{width:92%;max-width:520px;background:#fff;padding:18px;border-radius:12px;position:relative;box-shadow:0 18px 40px rgba(14,28,63,0.18)}
+    .modal h3{margin:0 0 8px}
+    .modal label{display:block;margin-top:8px;font-size:13px;color:#333}
+    .modal input,.modal textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;box-sizing:border-box;margin-top:6px}
+    .modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+    .btn{padding:8px 12px;border-radius:8px;border:none;background:var(--brand);color:#fff;cursor:pointer}
+    .btn-ghost{padding:8px 12px;border-radius:8px;border:1px solid #e6eefc;background:#fff;color:var(--brand);cursor:pointer}
+    #shareSheet{position:fixed;left:0;right:0;bottom:-100%;background:#fff;border-radius:12px 12px 0 0;padding:12px 18px;box-shadow:0 -12px 40px rgba(0,0,0,0.12);transition:bottom .28s ease;z-index:70}
+    #shareSheet.open{bottom:0}
+    .share-row{display:flex;gap:18px;justify-content:center;padding:10px 0}
+    .small{font-size:12px;color:var(--muted)}
+    @media (max-width:600px){ #profilePic{width:80px;height:80px} .profile-card{flex-direction:column;align-items:center;text-align:center} .profile-meta{width:100%} }
+  </style>
+</head>
+<body>
+
+<header>
+  <button id="backBtn" aria-label="Back"><i data-lucide="chevron-left"></i></button>
+  <div id="pageTitle">Profile</div>
+  <div style="flex:1"></div>
+  <div id="headerRight"></div>
+</header>
+
+<div class="container">
+  <div class="profile-card" id="profileCard">
+    
+    <div id="profilePic">A</div>
+    <div class="profile-meta">
+      <div class="profile-name" id="profileName">—</div>
+      <div class="profile-username" id="profileUsername">@username</div>
+      <div class="profile-bio" id="profileBio">—</div>
+      <div class="profile-stats">
+                      <p style="font-size: 10px;">Total Files</p>
+        <div id="statFiles"> 0</div>
+            <p style="font-size: 12px;">Age </p>
+       <div id="statAge">--</div>
+            <p style="font-size: 10px;">Years old </p>
+      </div>
+
+      <div class="private-grid" id="privateGrid" style="display:none;margin-top:10px">
+        <div class="private-item" id="profileEmailBox">
+          <div style="font-size:12px;color:#666">Email</div>
+          <div id="profileEmail" style="font-weight:600">—</div>
+        </div>
+        <div class="private-item" id="profilePasswordBox">
+          <div style="font-size:12px;color:#666">Password</div>
+          <div id="profilePassword" style="font-weight:600">******</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+      <button id="saveUserBtn" title="Save user" style="display:none"><i data-lucide="plus"></i></button>
+    </div>
+  </div>
+</div>
+
+<main id="fileList">
+  <p class="small">Loading files…</p>
+</main>
+
+<!-- Edit Modal -->
+<div class="modal-bg" id="editModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <h3 id="editTitle">Edit</h3>
+
+    <label id="labelText">Value</label>
+    <input id="editInput" />
+    <textarea id="editTextarea" rows="4" style="display:none"></textarea>
+
+    <div id="profilePicInputWrap" style="display:none">
+      <label>Profile picture URL (optional)</label>
+      <input id="editProfilePic" placeholder="https://..." />
+    </div>
+
+    <div class="row">
+      <button id="cancelEdit" class="btn-ghost">Cancel</button>
+      <button id="saveEdit" class="btn">Save</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="deleteModal" aria-hidden="true" style="z-index: 100;">
+  <div class="modal" role="dialog" aria-modal="true" style="max-width:300px; padding:24px; text-align:center;">
+    <div id="deleteSpinner" style="display:inline-block; border:4px solid #f3f3f3; border-top:4px solid var(--brand); border-radius:50%; width:30px; height:30px; animation: spin 1s linear infinite;"></div>
+    <h3 id="deleteTitle" style="margin-top:16px; font-weight: 500;">Deleting file...</h3>
+    <button id="cancelDelete" class="btn-ghost" style="margin-top:16px; display:none;">Cancel</button>
+  </div>
+</div>
+<style>
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<!-- Password Modal -->
+<div class="modal-bg" id="pwdModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true">
+    <h3>Change password</h3>
+    <label>Current password</label>
+    <input id="pwd_current" type="password" />
+    <label>New password</label>
+    <input id="pwd_new" type="password" />
+    <label>Confirm new password</label>
+    <input id="pwd_confirm" type="password" />
+    <div class="row">
+      <button id="pwd_cancel" class="btn-ghost">Cancel</button>
+      <button id="pwd_save" class="btn">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Share sheet -->
+<div id="shareSheet" aria-hidden="true">
+  <h4>Share File</h4>
+  <div class="share-row">
+    <button id="shareWhats"><i data-lucide="message-circle"></i><div class="small">WhatsApp</div></button>
+    <button id="shareTg"><i data-lucide="send"></i><div class="small">Telegram</div></button>
+    <button id="shareCopy"><i data-lucide="link-2"></i><div class="small">Copy</div></button>
+    <button id="closeShare"><i data-lucide="x"></i><div class="small">Close</div></button>
+  </div>
+</div>
+<script src="config.js"></script>
+<script>
+   
+const LIST_PATH = "list.json";
+
+// Utilities
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+const safeCreateIcons = () => { try { if (window.lucide && lucide.createIcons) lucide.createIcons(); } catch (e) {} };
+const escapeHtml = (s="") => String(s).replace(/[&<>"']/g, (m)=> ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+function b64DecodeUnicode(b64) { try { return decodeURIComponent(atob(b64).split('').map(c=>'%' + ('00'+c.charCodeAt(0).toString(16)).slice(-2)).join('')); } catch { try { return atob(b64); } catch { return ""; } } }
+function utf8ToBase64(s){ try { return btoa(unescape(encodeURIComponent(s))); } catch { return btoa(s); } }
+function timeAgo(ts){ if(!ts) return ""; const d=Date.now()-Number(ts); const m=Math.floor(d/60000); if(m<1) return "Just now"; if(m<60) return m+"m ago"; const h=Math.floor(m/60); if(h<24) return h+"h ago"; return Math.floor(h/24)+"d ago"; }
+function calcAgeFromMs(ms){ if(!ms) return "--"; const n=Number(ms); if(isNaN(n)) return "--"; return Math.floor((Date.now()-n)/(365.25*24*60*60*1000)); }
+
+// State
+let LIST_OBJ = {};
+let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
+const login = JSON.parse(localStorage.getItem("login") || "{}");
+const LOGGED_USER = login.username || null;
+const params = new URLSearchParams(location.search);
+const PROFILE_USER = (params.get("user") || LOGGED_USER || "").toString();
+const IS_OWNER = PROFILE_USER && LOGGED_USER && PROFILE_USER.toLowerCase() === LOGGED_USER.toLowerCase();
+
+// DOM refs
+const elBack = $("#backBtn");
+const elProfilePic = $("#profilePic");
+const elProfileName = $("#profileName");
+const elProfileUsername = $("#profileUsername");
+const elProfileBio = $("#profileBio");
+const elStatFiles = $("#statFiles");
+const elStatAge = $("#statAge");
+
+const elFileList = $("#fileList");
+const elSaveUser = $("#saveUserBtn");
+const elPrivateGrid = $("#privateGrid");
+const elProfileEmail = $("#profileEmail");
+const elProfilePassword = $("#profilePassword");
+
+const editModal = $("#editModal");
+const editTitle = $("#editTitle");
+const editInput = $("#editInput");
+const editTextarea = $("#editTextarea");
+const editProfilePic = $("#editProfilePic");
+const saveEdit = $("#saveEdit");
+const cancelEdit = $("#cancelEdit");
+
+const pwdModal = $("#pwdModal");
+const pwdCurrent = $("#pwd_current");
+const pwdNew = $("#pwd_new");
+const pwdConfirm = $("#pwd_confirm");
+const pwdSave = $("#pwd_save");
+const pwdCancel = $("#pwd_cancel");
+
+const shareSheet = $("#shareSheet");
+const shareWhats = $("#shareWhats");
+const shareTg = $("#shareTg");
+const shareCopy = $("#shareCopy");
+const closeShare = $("#closeShare");
+
+if (!PROFILE_USER) { alert("No profile specified"); throw new Error("No profile specified"); }
+
+// GitHub helpers
+async function ghGet(path){
+  const url = `https://api.github.com/repos/${G_NAME}/${REPO}/contents/${path}`;
+  const res = await fetch(url, { headers: { Authorization: `token ${TOKEN}` }});
+  if(!res.ok) throw res;
+  return res.json();
+}
+async function ghPut(path, contentBase64, message, sha){
+  const url = `https://api.github.com/repos/${G_NAME}/${REPO}/contents/${path}`;
+  const body = { message, content: contentBase64 };
+  if (sha) body.sha = sha;
+  const res = await fetch(url, { method:"PUT", headers:{ Authorization:`token ${TOKEN}`, "Content-Type":"application/json" }, body: JSON.stringify(body) });
+  if(!res.ok) throw res;
+  return res.json();
+}
+
+// Init
+(async function init(){
+  if (elBack) elBack.onclick = () => window.history.back();
+  safeCreateIcons();
+  await loadProfile();
+  await loadFiles();
+  safeCreateIcons();
+})();
+
+// Load profile
+async function loadProfile(){
+  let userObj = {};
+  try {
+    const res = await ghGet(`users/${PROFILE_USER}.json`);
+
+    if (res && res.content) userObj = JSON.parse(b64DecodeUnicode(res.content));
+  } catch (e) {
+  return showNotFound(PROFILE_USER);
+  }
+
+  // profile pic – user.json profilePic first, fallback to GitHub avatar, fallback to initial
+  const picUrl = (userObj.profilePic || userObj.Profile || "").trim();
+  if (picUrl) elProfilePic.innerHTML = `<img src="${escapeHtml(picUrl)}" alt="avatar">`;
+  else elProfilePic.textContent = (userObj.name || PROFILE_USER || "A").charAt(0).toUpperCase();
+
+  elProfileName.textContent = userObj.name || PROFILE_USER;
+  elProfileUsername.textContent = `@${PROFILE_USER}`;
+  elProfileBio.textContent = userObj.bio || "";
+  elStatAge.textContent = `   ${calcAgeFromMs(userObj.dob)
+  }`
+  if (IS_OWNER){
+    if (elPrivateGrid) elPrivateGrid.style.display = "flex";
+    if (elProfileEmail) elProfileEmail.textContent = userObj.email || login.email || "";
+    if (elProfilePassword) elProfilePassword.textContent = "******";
+
+    // clickable edits
+    elProfileName.style.cursor = "pointer"; elProfileName.onclick = () => openEdit("name", userObj);
+    elProfileBio.style.cursor = "pointer"; elProfileBio.onclick = () => openEdit("bio", userObj);
+    elProfileEmail.style.cursor = "pointer"; elProfileEmail.onclick = () => alert("you can't edit email");
+    elProfilePassword.style.cursor = "pointer"; elProfilePassword.onclick = () => openPasswordModal();
+    if (elSaveUser) elSaveUser.style.display = "none";
+  } else {
+    if (elPrivateGrid) elPrivateGrid.style.display = "none";
+    
+    if (elSaveUser) {
+      elSaveUser.style.display = "block";
+      
+      const saved = JSON.parse(localStorage.getItem("savedUsers")||"[]");
+      elSaveUser.innerHTML = saved.includes(PROFILE_USER) ? '<i data-lucide="check"></i>' : '<i data-lucide="plus"></i>';
+      elSaveUser.onclick = toggleSaveUser;
+    }
+  }
+  safeCreateIcons();
+}
+
+function toggleSaveUser(){
+  const arr = JSON.parse(localStorage.getItem("savedUsers")||"[]");
+  if(!arr.includes(PROFILE_USER)) arr.push(PROFILE_USER); else { const i=arr.indexOf(PROFILE_USER); if(i>=0) arr.splice(i,1); }
+  localStorage.setItem("savedUsers", JSON.stringify(arr));
+  elSaveUser.innerHTML = arr.includes(PROFILE_USER) ? '<i data-lucide="check"></i>' : '<i data-lucide="plus"></i>';
+  safeCreateIcons();
+}
+
+// Load files
+async function loadFiles(){
+  if (!elFileList) return;
+  elFileList.innerHTML = "<p class='small'>Loading files…</p>";
+  try {
+    const res = await ghGet(LIST_PATH);
+    const raw = res && res.content ? b64DecodeUnicode(res.content) : "{}";
+    const parsed = JSON.parse(raw || "{}");
+    LIST_OBJ = (typeof parsed === "object" && !Array.isArray(parsed)) ? parsed : {};
+    const entries = Object.entries(LIST_OBJ).filter(([id,f]) => ((f.Uploader||"").toLowerCase() === PROFILE_USER.toLowerCase()));
+    elStatFiles.textContent = ` ${entries.length}`;
+    renderFiles(entries.sort((a,b)=>(b[1].Time||0)-(a[1].Time||0)));
+  } catch (e) {
+    console.error("loadFiles error", e);
+    elFileList.innerHTML = "<p class='small'>Error loading files.</p>";
+  }
+}
+
+function renderFiles(entries){
+  if(!elFileList) return;
+  elFileList.innerHTML = "";
+  if(!entries || entries.length===0){ elFileList.innerHTML = "<p class='small'>No files yet.</p>"; return; }
+  for(const [id,meta] of entries){
+    const card = createCard(id, meta);
+    elFileList.appendChild(card);
+  }
+  safeCreateIcons();
+}
+
+function createCard(id, meta){
+  const ext = (meta.Path||"").split(".").pop() || "";
+  const iconName = ext.toLowerCase()==="pdf" ? "file-text" : (ext.toLowerCase().includes("ppt") ? "presentation" : "file");
+  const tags = Array.isArray(meta.Hastags) ? meta.Hastags : (typeof meta.Hastags==="string" ? meta.Hastags.split(",").map(t=>t.trim()).filter(Boolean) : []);
+  const uploader = (meta.Uploader||"").replace(/^@/,"");
+  const likesArr = Array.isArray(meta.Likes) ? meta.Likes : [];
+  const liked = LOGGED_USER ? likesArr.includes(LOGGED_USER) : false;
+  const likeCount = likesArr.length || 0;
+  const isBookmarked = bookmarks.includes(id);
+
+  const article = document.createElement("article");
+  article.className = "file-card";
+  article.style.position = "relative";
+  article.innerHTML = `
+    <div class="left" data-fileid="${escapeHtml(id)}" style="display:flex;gap:12px;align-items:flex-start;min-width:0">
+      <div class="file-icon"><i data-lucide="${iconName}"></i></div>
+      <div class="meta" style="min-width:0;flex:1">
+        <h3 class="file-name" title="${escapeHtml(meta.Name||'')}">${escapeHtml(meta.Name||'')}</h3>
+        <div class="uploader-row" data-uploader="${encodeURIComponent(uploader)}" style="margin-top:8px;color:var(--brand);cursor:pointer">@${escapeHtml(uploader||meta.UploaderName||'unknown')} <small>${timeAgo(meta.Time||0)}</small>
+         </div>
+        <div class="tags" style="display:flex;gap:8px;margin-top:8px;overflow:auto">${tags.map(t=>`<span class="tag">#${escapeHtml(t)}</span>`).join('')}</div>
+      </div>
+    </div>
+
+    <div class="actions" style="display:flex;flex-direction:column;gap:8px;align-items:center;margin-left:12px">
+      <button class="share-btn" data-path="${escapeHtml(meta.Path||'')}" title="Share"><i data-lucide="share-2"></i></button>
+      <button class="bookmark-btn" data-id="${escapeHtml(id)}" title="Bookmark"><i data-lucide="${isBookmarked ? 'bookmark-x' : 'bookmark'}"></i></button>
+      <button class="like-btn" data-id="${escapeHtml(id)}" title="Like"><i data-lucide="heart" style="${liked ? 'color:red;fill:red' : ''}"></i></button>
+      <div class="like-count" data-id="${escapeHtml(id)}">${likeCount}</div>
+    </div>
+
+    <div class="time">${timeAgo(meta.Time)}</div>
+  `;
+  attachCardHandlers(article, id, meta);
+  return article;
+}
+
+function attachCardHandlers(card, id, meta){
+  try {
+    const shareBtn = card.querySelector(".share-btn");
+    const bmBtn = card.querySelector(".bookmark-btn");
+    const likeBtn = card.querySelector(".like-btn");
+    const tagEls = Array.from(card.querySelectorAll(".tag"));
+    const uploaderRow = card.querySelector(".uploader-row");
+    const left = card.querySelector(".left");
+
+    if (shareBtn) shareBtn.addEventListener("click", e=>{ e.stopPropagation(); openShare(meta.Path); });
+    if (bmBtn) bmBtn.addEventListener("click", e=>{ e.stopPropagation(); toggleBookmark(id, bmBtn); });
+    if (likeBtn) likeBtn.addEventListener("click", e=>{ e.stopPropagation(); toggleLike(id, meta, likeBtn); });
+    tagEls.forEach(t=> t.addEventListener("click", e=>{ e.stopPropagation(); const tagText = t.textContent.replace("#","").trim(); location.href = `hashtags.html?tag=${encodeURIComponent(tagText)}`; }));
+    if (uploaderRow) uploaderRow.addEventListener("click", e=>{ e.stopPropagation(); const u = decodeURIComponent(uploaderRow.getAttribute("data-uploader")||''); if(u) location.href = `profile.html?user=${encodeURIComponent(u)}`; });
+    if (left) left.addEventListener("click", ()=>{ if (meta.Path) location.href = `pdf.html?path=${encodeURIComponent(meta.Path)}`; });
+  } catch (err) { console.error("attach handlers", err); }
+}
+
+// Bookmarks (local)
+function toggleBookmark(id, btn){
+  const idx = bookmarks.indexOf(id);
+  if (idx === -1) bookmarks.push(id); else bookmarks.splice(idx,1);
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  const icon = btn.querySelector("i");
+  if (icon) { icon.setAttribute("data-lucide", bookmarks.includes(id) ? "bookmark-x" : "bookmark"); safeCreateIcons(); }
+}
+
+// Likes: instant UI + persist to GitHub
+async function toggleLike(id, meta, btn){
+  if (!LOGGED_USER) { if (confirm("Login to like files?")) location.href = "login.html"; return; }
+  try {
+    const likes = Array.isArray(meta.Likes) ? meta.Likes.slice() : [];
+    const has = likes.includes(LOGGED_USER);
+    if (has) likes.splice(likes.indexOf(LOGGED_USER),1); else likes.push(LOGGED_USER);
+    meta.Likes = likes;
+
+    // UI update
+    const icon = btn.querySelector("i");
+    if (icon) { if (likes.includes(LOGGED_USER)) { icon.style.color="red"; icon.style.fill="red"; } else { icon.style.color=""; icon.style.fill=""; } }
+    const countEl = btn.parentElement.querySelector(".like-count");
+    if (countEl) countEl.textContent = likes.length;
+
+    // persist
+    try {
+      const res = await ghGet(LIST_PATH);
+      const listObj = res && res.content ? JSON.parse(b64DecodeUnicode(res.content)) : {};
+      if (!listObj[id]) listObj[id] = meta;
+      listObj[id].Likes = likes;
+      const payload = utf8ToBase64(JSON.stringify(listObj, null, 2));
+      await ghPut(LIST_PATH, payload, `Update likes for ${id}`, res.sha);
+      LIST_OBJ = listObj;
+    } catch (err) { console.error("persist like failed", err); }
+  } catch (err) { console.error("toggleLike", err); }
+}
+
+// Share sheet
+let currentSharePath = null;
+function openShare(path){ currentSharePath = path; if (shareSheet) shareSheet.classList.add("open"); }
+function closeShareFn(){ if (shareSheet) shareSheet.classList.remove("open"); currentSharePath = null; }
+if (closeShare) closeShare.addEventListener("click", closeShareFn);
+if (shareWhats) shareWhats.addEventListener("click", ()=>{ if(!currentSharePath) return; window.open(`https://wa.me/?text=${encodeURIComponent(location.origin + '/pdf.html?file=' + currentSharePath)}`); closeShareFn(); });
+if (shareTg) shareTg.addEventListener("click", ()=>{ if(!currentSharePath) return; window.open(`https://t.me/share/url?url=${encodeURIComponent(location.origin + '/pdf.html?file=' + currentSharePath)}`); closeShareFn(); });
+if (shareCopy) shareCopy.addEventListener("click", ()=>{ if(!currentSharePath) return; navigator.clipboard.writeText(location.origin + '/pdf.html?file=' + currentSharePath).then(()=>{ alert('Link copied'); closeShareFn(); }); });
+
+// Edit flows
+let currentEditField = null;
+async function openEdit(field, userObj){
+  currentEditField = field;
+  if (!editModal) return;
+  editModal.style.display = "flex";
+  editProfilePic.style.display = "block";
+  editInput.style.display = "none";
+  editTextarea.style.display = "none";
+  editProfilePic.value = userObj.profilePic || userObj.Profile || "";
+
+  if (field === "name"){
+    editTitle.textContent = "Edit Name";
+    editInput.style.display = "block";
+    editInput.value = userObj.name || "";
+  } else if (field === "bio"){
+    editTitle.textContent = "Edit Bio";
+    editTextarea.style.display = "block";
+    editTextarea.value = userObj.bio || "";
+  } else if (field === "email"){
+    editTitle.textContent = "Edit Email";
+    editInput.style.display = "block";
+    editInput.value = userObj.email || "";
+  }
+}
+if (cancelEdit) cancelEdit.onclick = ()=> { if (editModal) editModal.style.display = "none"; };
+
+// save edit
+if (saveEdit) saveEdit.onclick = async ()=>{
+  if (!IS_OWNER) return;
+  try {
+    let existing = {};
+    let sha;
+    try { const res = await ghGet(`users/${PROFILE_USER}.json`); if(res && res.content) existing = JSON.parse(b64DecodeUnicode(res.content)); sha = res.sha; } catch(e){ existing = {}; sha = undefined; }
+
+    if (currentEditField === "name") { existing.name = (editInput.value || "").trim(); }
+    if (currentEditField === "email") { existing.email = (editInput.value || "").trim(); }
+    if (currentEditField === "bio") { existing.bio = (editTextarea.value || "").trim(); }
+    // profile pic always write if set
+    if (editProfilePic && editProfilePic.value) existing.profilePic = editProfilePic.value.trim();
+
+    if (!existing.Joined) existing.Joined = Date.now();
+    const payload = utf8ToBase64(JSON.stringify(existing, null, 2));
+    await ghPut(`users/${PROFILE_USER}.json`, payload, `Update profile ${currentEditField||''}`, sha);
+    if (editModal) editModal.style.display = "none";
+    await loadProfile();
+  } catch (err) { console.error("saveEdit failed", err); alert("Save failed"); }
+};
+
+// password modal
+function openPasswordModal(){ if (pwdModal) pwdModal.style.display = "flex"; }
+if (pwdCancel) pwdCancel.onclick = ()=> { if(pwdModal) pwdModal.style.display = "none"; };
+if (pwdSave) pwdSave.onclick = async ()=>{
+  if (!IS_OWNER) return;
+  const cur = pwdCurrent.value || "";
+  const nw = pwdNew.value || "";
+  const cf = pwdConfirm.value || "";
+  if (!cur || !nw || !cf) return alert("Fill all fields");
+  if (nw !== cf) return alert("New passwords don't match");
+  try {
+    const res = await ghGet(`users/${PROFILE_USER}.json`);
+    const obj = res && res.content ? JSON.parse(b64DecodeUnicode(res.content)) : {};
+    if (String(obj.password || "") !== String(cur)) return alert("Current password wrong");
+    obj.password = nw;
+    const payload = utf8ToBase64(JSON.stringify(obj, null, 2));
+    await ghPut(`users/${PROFILE_USER}.json`, payload, "Change password", res.sha);
+    if (pwdModal) pwdModal.style.display = "none";
+    alert("Password updated");
+  } catch (err) { console.error("pwdSave error", err); alert("Failed to update password"); }
+};
+
+// click outside modals to close
+document.addEventListener("click", (e)=>{
+  if (editModal && e.target === editModal) editModal.style.display = "none";
+  if (pwdModal && e.target === pwdModal) pwdModal.style.display = "none";
+});
+function showNotFound(nouserf) {
+    document.body.innerHTML = `
+        <div style="padding:40px;text-align:center;">
+            <h2>User not found</h2>
+            <p>We couldn't find ${nouserf}.</p>
+            <button onclick="history.back()" 
+            style="margin-top:20px;padding:10px 18px;border-radius:8px;border:none;background:#1976d2;color:white;">
+                Go Back
+            </button>
+        </div>`;
+}
+// done
+function timeAgo(ts){
+  if(!ts) return '';
+  const d = Date.now() - ts;
+  const mins = Math.floor(d/60000);
+  if(mins < 1) return 'Just now';
+  if(mins < 60) return `${mins} minute${mins>1?'s':''} ago`;
+  const hrs = Math.floor(mins/60);
+  if(hrs < 24) return `${hrs} hour${hrs>1?'s':''} ago`;
+  const days = Math.floor(hrs/24);
+  return `${days} day${days>1?'s':''} ago`;
+}
+// --- File Deletion Logic ---
+
+const elDeleteModal = $("#deleteModal");
+const elDeleteTitle = $("#deleteTitle");
+const elCancelDelete = $("#cancelDelete");
+const elDeleteSpinner = $("#deleteSpinner");
+const elFileList2 = $("#fileList"); // already defined
+
+// GitHub helper to delete a file
+async function ghDelete(path, sha){
+  const url = `https://api.github.com/repos/${G_NAME}/${REPO}/contents/${path}`;
+  const body = { message: `Delete file ${path}`, sha };
+  const res = await fetch(url, { 
+    method:"DELETE", 
+    headers:{ Authorization:`token ${TOKEN}`, "Content-Type":"application/json" }, 
+    body: JSON.stringify(body) 
+  });
+  if(!res.ok) throw res;
+  return res.json();
+}
+
+let currentDeletePath = null;
+let currentDeleteSha = null;
+let currentDeleteCard = null;
+
+function openDeleteModal(title, canCancel = false) {
+    if (elDeleteModal) elDeleteModal.style.display = "flex";
+    if (elDeleteTitle) elDeleteTitle.textContent = title;
+    if (elCancelDelete) elCancelDelete.style.display = canCancel ? "inline-block" : "none";
+    if (elDeleteSpinner) elDeleteSpinner.style.display = "inline-block";
+}
+
+function closeDeleteModal() {
+    if (elDeleteModal) elDeleteModal.style.display = "none";
+    currentDeletePath = null;
+    currentDeleteSha = null;
+    currentDeleteCard = null;
+}
+
+if (elCancelDelete) elCancelDelete.onclick = closeDeleteModal;
+
+
+async function startDeleteFile(id, meta, card, path, sha) {
+    if (!confirm(`Are you sure you want to delete the file "${meta.Name}"? This action cannot be undone.`)) {
+        return;
+    }
+
+    currentDeletePath = path;
+    currentDeleteSha = sha;
+    currentDeleteCard = card;
+    openDeleteModal("Deleting file...", false);
+
+    try {
+        // 1. Delete the file from the repository
+        await ghDelete(currentDeletePath, currentDeleteSha);
+
+        // 2. Remove the file entry from list.json
+        const resList = await ghGet(LIST_PATH);
+        const listObj = resList && resList.content ? JSON.parse(b64DecodeUnicode(resList.content)) : {};
+        const listSha = resList.sha;
+        
+        if (listObj[id]) {
+            delete listObj[id]; // Remove the entry
+            const payload = utf8ToBase64(JSON.stringify(listObj, null, 2));
+            await ghPut(LIST_PATH, payload, `Remove file entry ${id} after deletion`, listSha);
+        }
+
+        // Success: Update UI
+        if (currentDeleteCard) currentDeleteCard.remove();
+        elDeleteTitle.textContent = "File deleted successfully!";
+        if (elDeleteSpinner) elDeleteSpinner.style.display = "none";
+        
+        // Update file count
+        const files = Object.entries(listObj).filter(([id,f]) => ((f.Uploader||"").toLowerCase() === PROFILE_USER.toLowerCase()));
+        elStatFiles.textContent = ` ${files.length}`;
+        if (files.length === 0) elFileList.innerHTML = "<p class='small'>No files yet.</p>";
+
+        setTimeout(closeDeleteModal, 1500); // Close after 1.5s
+    } catch (err) {
+        console.error("Delete file failed", err);
+        elDeleteTitle.textContent = "Failed to delete file!";
+        if (elDeleteSpinner) elDeleteSpinner.style.display = "none";
+        elCancelDelete.textContent = "Close";
+        elCancelDelete.style.display = "inline-block";
+    }
+}
+
+// Override createCard to add the delete button
+const originalCreateCard = createCard;
+window.createCard = function(id, meta) {
+    const card = originalCreateCard(id, meta);
+
+    // Check if the current user is the uploader (or an admin, if you implement that)
+    const uploader = (meta.Uploader||"").replace(/^@/,"");
+    const isUploader = LOGGED_USER && uploader.toLowerCase() === LOGGED_USER.toLowerCase();
+    
+    if (isUploader) {
+        // Add the delete button HTML
+        const actionsDiv = card.querySelector(".actions");
+        if (actionsDiv) {
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.title = 'Delete File';
+            deleteBtn.style.color = 'red';
+            deleteBtn.innerHTML = '<i data-lucide="trash-2"></i>';
+            actionsDiv.prepend(deleteBtn);
+            
+            // Attach delete handler
+            deleteBtn.addEventListener("click", async (e) => {
+                e.stopPropagation();
+                
+                // We need the file's SHA to delete it from GitHub. Let's fetch it first.
+                // NOTE: This assumes the file's Path in the list.json is the full path in the repo.
+                const filePath = meta.Path; 
+                try {
+                    openDeleteModal("Verifying file...", false);
+                    const resFile = await ghGet(filePath);
+                    const fileSha = resFile.sha;
+                    closeDeleteModal(); 
+                    // Start deletion process
+                    startDeleteFile(id, meta, card, filePath, fileSha);
+                } catch(err) {
+                    console.error("Failed to get file SHA for deletion", err);
+                    elDeleteTitle.textContent = "Error: Could not find file data.";
+                    if (elDeleteSpinner) elDeleteSpinner.style.display = "none";
+                    elCancelDelete.textContent = "Close";
+                    elCancelDelete.style.display = "inline-block";
+                }
+            });
+        }
+    }
+
+    return card;
+}
+// Add click outside modals to close for delete modal as well
+document.addEventListener("click", (e)=>{
+  if (editModal && e.target === editModal) editModal.style.display = "none";
+  if (pwdModal && e.target === pwdModal) pwdModal.style.display = "none";
+  if (elDeleteModal && e.target === elDeleteModal) closeDeleteModal();
+});
+
+</script>
+</body>
+</html>
