@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome - Document Portal</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4d96ff;
+      --bg: #f7f9fb;
+      --text: #222;
+      --card-bg: #fff;
+      --border: #ddd;
+      --green-fact: #4CAF50; /* For fact box background */
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: "Inter", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    /* --- Sections --- */
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .section-heading h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .section-heading .show-all-btn {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .show-all-btn i { width: 18px; height: 18px; stroke: var(--primary); }
+
+    /* --- Header & Notification Icon --- */
+    header {
+      padding: 0; /* Removing original padding */
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      width: 100%;
+    }
+    .header-content h1, .header-content p { text-align: left; }
+
+    .notification-icon-container {
+      cursor: pointer;
+      position: relative;
+    }
+    .notification-icon-container i {
+      width: 26px;
+      height: 26px;
+      color: var(--primary);
+    }
+    .badge {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 10px;
+        height: 10px;
+        background-color: #ff4d4f; /* Red */
+        border-radius: 50%;
+        border: 2px solid var(--bg);
+    }
+
+    /* --- Logged-in Header --- */
+    .logged-in-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 0;
+    }
+    .user-avatar img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+    }
+    .welcome-text {
+      flex-grow: 1;
+    }
+    .welcome-text h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .welcome-text p {
+      margin: 2px 0 0 0;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* --- Categories --- */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 10px; /* Space for scrollbar */
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (min-width: 600px) {
+        .categories-grid {
+            grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+        }
+    }
+
+    .category-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 15px 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.1s ease;
+      cursor: pointer;
+    }
+    .category-card:hover { transform: translateY(-3px); }
+    .category-card i {
+      width: 30px;
+      height: 30px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .category-card span {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    
+    /* --- Avatar Fact Section --- */
+    .fact-box {
+      background: var(--green-fact);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 14px;
+      margin-top: 2rem;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .fact-avatar img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .fact-text p {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* --- Login/Signup Section --- */
+    .login-section {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: var(--card-bg);
+      border-radius: 14px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .login-section h3 {
+        margin-top: 0;
+        color: var(--primary);
+    }
+    .login-section p {
+        color: #555;
+        margin-bottom: 20px;
+    }
+    .login-section .avatar-animation {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        animation: pulse 1.5s infinite;
+    }
+    .login-section .avatar-animation img {
+        width: 100%;
+        height: 100%;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.8; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    .start-button {
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(77, 150, 255, 0.4);
+      transition: background 0.15s ease;
+    }
+    .start-button:hover { background: #3a80e6; }
+    
+    /* --- File Preview Styling (Reused for Docs & Notifs) --- */
+    .file-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: transform 0.1s ease;
+      cursor: pointer;
+    }
+    .file-card:hover { transform: scale(1.01); }
+    .file-info { display: flex; align-items:flex-start; gap: 10px; width: 100%; } 
+    .f2 { width: 30px; color: var(--primary); } 
+    .meta{min-width:0;flex:1} 
+    .meta h3 { margin: 0; color: var(--text); font-size: 1rem; }
+    .uploader { margin: 8px 0 0 0; display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
+    .uploader span{ color: #555; font-weight: 500;}
+  
+    .tags{ display:flex; gap:8px; margin-top:8px; overflow-x: auto; padding-bottom: 5px; } 
+    .tag{ white-space:nowrap; padding:6px 10px; background:#eaf4ff; border-radius:999px; color:var(--primary); font-size:12px}
+    
+    /* --- Instagram Card --- */
+    .insta-card {
+        background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #833ab4, #5851db);
+        padding: 1.5rem;
+        border-radius: 14px;
+        margin-top: 1.5rem;
+        text-align: center;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .insta-card i {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .insta-card h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .insta-card p {
+        margin: 5px 0 15px;
+        font-size: 0.95rem;
+    }
+    .insta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        background: white;
+        color: #bc1888; /* Insta Color */
+        border-radius: 999px;
+        cursor: pointer;
+        transition: background 0.15s ease;
+        text-decoration: none;
+    }
+    .insta-button i {
+        width: 20px;
+        height: 20px;
+        color: #bc1888;
+        margin: 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="header-content">
+      <div>
+        <h1 style="color:var(--primary); margin:0; font-size:1.8rem;">Document Hub</h1>
+        <p style="color:#777; margin:5px 0 0 0;">Knowledge at your fingertips.</p>
+      </div>
+      <div class="notification-icon-container" onclick="window.location.href='notification.html'">
+          <i data-lucide="bell"></i>
+          <span class="badge" id="notificationBadge" style="display:none;"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="logged-in-header" id="loggedInHeader" style="display:none;">
+      <div class="user-avatar">
+          <img id="userProfilePic" src="https://ui-avatars.com/api/?name=User&background=4d96ff&color=fff&bold=true" alt="User Avatar" />
+      </div>
+      <div class="welcome-text">
+          <h2>Welcome Back, <span id="userNameDisplay">User</span>!</h2>
+          <p>Let's dive into your knowledge base.</p>
+      </div>
+  </div>
+
+  <div class="login-section" id="introLoginSection">
+    <div class="avatar-animation">
+        <img src="IMG_20251021_202239_777.webp" alt="Cool Bear Avatar" />
+    </div>
+    <h3>Welcome to the Portal!</h3>
+    <p>Explore thousands of academic and technical documents.</p>
+    <button class="start-button" onclick="window.location.href='login.html'">Get Started</button>
+  </div>
+
+  <div class="section-heading">
+    <h2>Explore Categories</h2>
+    <a class="show-all-btn" href="home.html">
+        Show All <i data-lucide="arrow-right"></i>
+    </a>
+  </div>
+
+  <div class="categories-grid">
+    <div class="category-card" data-category="agriculture" onclick="window.location.href='hashtags.html?tag=agriculture'">
+      <i data-lucide="leaf"></i><span>Agriculture</span>
+    </div>
+    <div class="category-card" data-category="horticulture" onclick="window.location.href='hashtags.html?tag=horticulture'">
+      <i data-lucide="flower"></i><span>Horticulture</span>
+    </div>
+    <div class="category-card" data-category="engineering" onclick="window.location.href='hashtags.html?tag=engineering'">
+      <i data-lucide="cog"></i><span>Engineering</span>
+    </div>
+    <div class="category-card" data-category="science" onclick="window.location.href='hashtags.html?tag=science'">
+      <i data-lucide="flask-round"></i><span>Science</span>
+    </div>
+    <div class="category-card" data-category="commerce" onclick="window.location.href='hashtags.html?tag=commerce'">
+      <i data-lucide="banknote"></i><span>Commerce</span>
+    </div>
+    <div class="category-card" data-category="technology" onclick="window.location.href='hashtags.html?tag=technology'">
+      <i data-lucide="code"></i><span>Technology</span>
+    </div>
+  </div>
+
+  <div class="insta-card">
+    <i data-lucide="instagram"></i>
+    <h3>Follow Us on Instagram!</h3>
+    <p>For the latest updates and educational facts, follow **@AGxmind**.</p>
+    <a href="https://www.instagram.com/AGxmind" target="_blank" class="insta-button">
+        <i data-lucide="instagram"></i>
+        Follow @AGxmind
+    </a>
+  </div>
+  
+  <div class="section-heading" id="latestNotifHeading" style="display:none;">
+    <h2>Latest Notifications</h2>
+    <a class="show-all-btn" href="notification.html">
+        View All <i data-lucide="arrow-right"></i>
+    </a>
+  </div>
+  <div id="notificationPreviewList"></div> 
+  <div class="fact-box">
+    <div class="fact-avatar">
+        <img src="https://ui-avatars.com/api/?name=Fact+Bot&background=fff&color=4CAF50&bold=true" alt="Fact Avatar">
+    </div>
+    <div class="fact-text">
+      <p id="randomFact">Did you know? A single corn plant can produce over 500 kernels!</p>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <h2>Latest Documents</h2>
+    <a class="show-all-btn" href="home.html">
+        View All <i data-lucide="arrow-right"></i>
+    </a>
+  </div>
+
+  <div id="fileListPreview"><p>Loading latest documents...</p></div>
+
+
+<script src="config.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const $ = (s) => document.querySelector(s);
+        const fileListPreviewEl = $("#fileListPreview");
+        let files = {};
+        
+        // 1. 👤 लॉगिन की स्थिति की जाँच करें
+        const loginSection = $("#introLoginSection");
+        const loggedInHeader = $("#loggedInHeader");
+        const userProfilePicEl = $("#userProfilePic");
+        const userNameDisplayEl = $("#userNameDisplay");
+        const notificationBadge = $("#notificationBadge");
+
+        const loginUser = JSON.parse(localStorage.getItem("login") || "{}");
+        const loggedIn = !!loginUser.username;
+        
+        if (loggedIn) {
+            // यदि लॉग इन हैं, तो लॉगिन सेक्शन को छिपा दें और लॉग इन हेडर दिखाएं
+            loginSection.style.display = 'none';
+            loggedInHeader.style.display = 'flex';
+            
+            // यूज़रनेम डिस्प्ले करें
+            const username = loginUser.username;
+            userNameDisplayEl.textContent = username;
+
+            // प्रोफ़ाइल पिक्चर लोड करें
+            loadUserProfilePic(username);
+            loadLatestNotifications(username); // नवीनतम नोटिफ़िकेशन लोड करें
+        } else {
+             loadLatestNotifications(); // गेस्ट के लिए नोटिफ़िकेशन लोड करें
+        }
+
+        // --- HELPERS (Copied from notification.html) ---
+        function getCategoryIcon(cat){
+            if(!cat) return "bell";
+            const c = cat.toLowerCase();
+            if(c.includes("update")) return "refresh-cw";
+            if(c.includes("government") || c.includes("gov") || c.includes("sarkar"))
+                return "landmark";
+            return "bell";
+        }
+        function timeAgo(ts){
+            if(!ts) return "";
+            const diff = Date.now()-ts;
+            const m = Math.floor(diff/60000);
+            if(m<1) return "Just now";
+            if(m<60) return m+"m ago";
+            const h = Math.floor(m/60);
+            if(h<24) return h+"h ago";
+            const d = Math.floor(h/24);
+            return d+"d ago";
+        }
+        function escapeHtml(s){
+            return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[m]));
+        }
+        // --- END HELPERS ---
+
+        // 3. प्रोफ़ाइल पिक्चर लोड करें
+        async function loadUserProfilePic(username) {
+            try {
+                // यह मानते हुए कि प्रोफ़ाइल JSON फ़ाइल का नाम `username.json` है (जैसे agxmind.json)
+                const r = await fetch(`https://api.github.com/repos/${G_NAME}/${REPO}/contents/users/${username}.json`, {
+                    headers: { Authorization: `token ${TOKEN}` },
+                });
+                const j = await r.json();
+                const userProfile = JSON.parse(b64Decode(j.content));
+                if (userProfile && userProfile.profilePic) {
+                    userProfilePicEl.src = userProfile.profilePic;
+                }
+            } catch (err) {
+                console.warn(`Could not load profile for ${username}. Using default avatar.`);
+                // डिफ़ॉल्ट अवतार का उपयोग करें यदि लोड नहीं होता है
+            }
+        }
+        
+        // 2. नोटिफ़िकेशन प्रीव्यू लोड करें (नया फ़ंक्शन)
+        function renderNotificationPreview(latestNotifications) {
+            const notifPreviewListEl = $("#notificationPreviewList");
+            const latestNotifHeading = $("#latestNotifHeading");
+            notifPreviewListEl.innerHTML = "";
+            latestNotifHeading.style.display = latestNotifications.length > 0 ? 'flex' : 'none';
+
+            if (latestNotifications.length === 0) {
+                return;
+            }
+
+            latestNotifications.forEach(n => {
+                const card = document.createElement("div");
+                // Reusing the file-card class structure for consistent look
+                card.className = "file-card"; 
+                card.style.marginBottom = '10px'; // Less space than file list
+                
+                const categoryIcon = getCategoryIcon(n.category); 
+                const time = timeAgo(n.time);
+                
+                card.innerHTML = `
+                    <div class="file-info">
+                        <div class="f2" style="width: 30px; color: #ff4d4f;"><i data-lucide="${categoryIcon}"></i>
+                        </div>
+                        <div class="meta">
+                            <h3 style="font-size: 0.95rem;">${escapeHtml(n.title)}</h3>
+                            <div class="uploader" style="margin-top: 5px;">
+                                <span style="font-size: 0.8rem; color: #555;">${escapeHtml(n.category)} - ${time}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // क्लिक इवेंट: notificationDetail पेज पर रीडायरेक्ट करें
+                card.onclick = () => {
+                    window.location.href = `notificationDetail.html?id=${n.id}`;
+                };
+
+                notifPreviewListEl.appendChild(card);
+            });
+            safeCreateIcons();
+        }
+
+        async function loadLatestNotifications(username = null) {
+            try {
+                const res = await fetch(
+                    `https://api.github.com/repos/${G_NAME}/${REPO}/contents/Notification.json`
+                );
+                const j = await res.json();
+                const allNotifications = JSON.parse(b64Decode(j.content));
+
+                const sortedNotifications = Object.keys(allNotifications)
+                    .map(id => ({ id, ...allNotifications[id] })) // ID को ऑब्जेक्ट में जोड़ें
+                    .sort((a,b)=>(b.time||0)-(a.time||0)); // समय के अनुसार क्रमबद्ध करें
+
+                // केवल पहले 3 नोटिफ़िकेशन दिखाएं
+                const latestThree = sortedNotifications.slice(0, 3);
+                
+                renderNotificationPreview(latestThree);
+
+                // बैज डिस्प्ले लॉजिक: यदि नवीनतम नोटिफ़िकेशन 1 घंटे से कम पुराना है
+                if (sortedNotifications.length > 0) {
+                    const latestNotifTime = sortedNotifications[0].time;
+                    if (latestNotifTime > (Date.now() - 60 * 60 * 1000) ) { 
+                        notificationBadge.style.display = 'block';
+                    }
+                }
+            } catch (err) {
+                console.error("Could not load notifications.", err);
+            }
+        }
+        // --- END Notification Loading ---
+
+        // कृषि से संबंधित रैंडम तथ्य
+        const agricultureFacts = [
+            "Did you know? A single corn plant can produce over 500 kernels!",
+            "Did you know? Hydroponics (growing plants without soil) uses up to 90% less water than traditional farming.",
+            "Did you know? Bees are responsible for pollinating roughly one-third of the world's food supply.",
+            "Did you know? The world's largest fruit is the jackfruit, which can weigh up to 100 pounds.",
+            "Did you know? Rice is the staple food for more than half of the world's population."
+        ];
+        
+        // एक रैंडम तथ्य सेट करें
+        $("#randomFact").textContent = agricultureFacts[Math.floor(Math.random() * agricultureFacts.length)];
+        
+        // home.html से उपयोगिता फ़ंक्शन (safeCreateIcons और b64Decode)
+        function safeCreateIcons() {
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        }
+        function base64ToUtf8(b64) {
+            return new TextDecoder().decode(Uint8Array.from(atob(b64), c => c.charCodeAt(0)));
+        }
+        function b64Decode(str) {
+            return base64ToUtf8(str);
+        }
+
+        async function loadFiles() {
+            // Github API से `list.json` लोड करें
+            try {
+                // TOKEN, G_NAME, REPO config.js से आने चाहिए
+                const r = await fetch(`https://api.github.com/repos/${G_NAME}/${REPO}/contents/list.json`, {
+                    headers: { Authorization: `token ${TOKEN}` },
+                });
+                const j = await r.json();
+                files = JSON.parse(b64Decode(j.content));
+
+   // समय के अनुसार क्रमबद्ध करें
+                const sorted = Object.fromEntries(
+                    Object.entries(files).sort((a, b) => (b[1].Time || 0) - (a[1].Time || 0))
+                );
+                
+                // केवल पहले 4 फ़ाइलें दिखाएं
+                const latestFiles = Object.entries(sorted).slice(0, 4); 
+
+                renderPreview(latestFiles);
+            } catch (err) {
+                fileListPreviewEl.innerHTML = "<p>Could not load latest files.</p>";
+                console.error(err);
+            }
+        }
+
+        function renderPreview(latestFiles) {
+            fileListPreviewEl.innerHTML = "";
+            if (latestFiles.length === 0) {
+                 fileListPreviewEl.innerHTML = "<p>No files available yet.</p>";
+                 return;
+            }
+            
+            latestFiles.forEach(([id, file]) => {
+                const card = document.createElement("div");
+                card.className = "file-card";
+                card.dataset.filepath = file.Path; 
+
+                let tagsArr = [];
+                if (Array.isArray(file.Hastags)) {
+                    tagsArr = file.Hastags;
+                } else if (typeof file.Hastags === "string") {
+                    tagsArr = file.Hastags.split(",").map((t) => t.trim()).filter(Boolean);
+                }
+
+                card.innerHTML = `
+                    <div class="file-info">
+                        <div class="f2">
+                            <i data-lucide="files"></i>
+                        </div>
+                        <div class="meta">
+                            <h3>${file.Name}</h3>
+                            <div class="uploader">
+                                <span>@${file.Uploader}</span>
+                            </div>
+                            <div class="tags">${tagsArr.map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+                        </div>
+                    </div>
+                `;
+                fileListPreviewEl.appendChild(card);
+            });
+            safeCreateIcons();
+        }
+
+        // 5. 📄 फ़ाइल कार्ड पर क्लिक (PDF.html पर रीडायरेक्ट)
+        fileListPreviewEl.addEventListener("click", (e) => {
+            const fileCard = e.target.closest(".file-card");
+            if (fileCard) {
+                const filePath = fileCard.dataset.filepath;
+                if (filePath) {
+                    window.location.href = `pdf.html?path=${encodeURIComponent(filePath)}`;
+                }
+            }
+        });
+
+        safeCreateIcons();
+        loadFiles();
+    });
+</script>
+</body>
+</html>
