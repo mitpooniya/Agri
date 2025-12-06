@@ -1,23 +1,27 @@
 [
-    {
-        "id": "quiz101",
-        "title": "बुनियादी प्रोग्रामिंग क्विज़",
-        "questions": [
-            {
-                "q": "वेब पेज बनाने के लिए किस भाषा का उपयोग किया जाता है?",
-                "options": ["Python", "JavaScript", "HTML", "CSS"],
-                "answer": "HTML",
-                "hint": "यह पेज की संरचना (structure) प्रदान करती है।",
-                "explain": "HTML (HyperText Markup Language) का उपयोग वेब पेजों की संरचना बनाने के लिए किया जाता है। CSS स्टाइलिंग के लिए और JavaScript इंटरेक्शन के लिए होता है।"
-            },
-            {
-                "q": "CSS का मतलब क्या है?",
-                "options": ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style System", "Complex Style Sheets"],
-                "answer": "Cascading Style Sheets",
-                "hint": "शब्द 'कैसकेडिंग' पर ध्यान दें।",
-                "explain": "CSS का मतलब Cascading Style Sheets है, जिसका उपयोग HTML तत्वों को स्टाइल करने के लिए किया जाता है।"
-            }
-            
-        ]
-    }
-]
+  {
+    "id": 1,
+    "title": "बुनियादी प्रोग्रामिंग क्विज़",
+    "questions": [
+      {
+        "q": "HTML का पूरा नाम क्या है?",
+        "options": ["Hyper Text Markup Language", "High Tech Multi Language", "Home Tool Markup Language"],
+        "answer": 0,
+        "explain": "HTML का मतलब Hyper Text Markup Language होता है, जिसका उपयोग वेब पेजों को बनाने के लिए किया जाता है।"
+      },
+      {
+        "q": "CSS का उपयोग किस लिए किया जाता है?",
+        "options": ["वेब पेज की संरचना", "वेब पेज की स्टाइलिंग", "डेटाबेस प्रबंधन"],
+        "answer": 1,
+        "explain": "CSS का मतलब Cascading Style Sheets है और इसका उपयोग वेब पेज के तत्वों को स्टाइल करने (रंग, फ़ॉन्ट, लेआउट) के लिए किया जाता है।"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "जावास्क्रिप्ट फंडामेंटल्स",
+    "questions": [
+    
+    ]
+  }
+      ]
