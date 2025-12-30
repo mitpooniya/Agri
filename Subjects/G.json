@@ -1,0 +1,293 @@
+{
+  "subject_title": "PRINCIPLES OF GENETICS",
+  "topics": [
+    {
+      "id": 1,
+      "title": "Pre and Post Mendelian concepts of heredity",
+      "hindi": "आनुवंशिकता की प्री और पोस्ट मेंडेलियन अवधारणाएं",
+      "content": "आनुवंशिकी का इतिहास मेंडल के प्रयोगों से बहुत पहले शुरू हुआ था। मेंडल से पूर्व (Pre-Mendelian) युग में 'ब्लेंडिंग इनहेरिटेंस' जैसी अवधारणाएं प्रचलित थीं, जहाँ माना जाता था कि माता-पिता के लक्षण तरल पदार्थ की तरह आपस में मिल जाते हैं। डार्विन की 'पेंजेनेसिस' और 'प्रीफॉर्मेशन' थ्योरी इसके उदाहरण थे। हालांकि, 1900 में मेंडल के कार्यों की पुन: खोज के बाद (Post-Mendelian), 'पार्टिकुलेट इनहेरिटेंस' की समझ विकसित हुई, जिसने आधुनिक आनुवंशिकी की नींव रखी। इसके बाद सटन और बोवेरी ने 'क्रोमोसोमल थ्योरी' दी, जिसने सिद्ध किया कि जीन गुणसूत्रों पर स्थित होते हैं। यह संक्रमण जीव विज्ञान में एक मील का पत्थर था।",
+      "points": [
+        "Blending inheritance vs Particulate inheritance",
+        "Early theories: Pangenesis and Preformationism",
+        "Post-Mendelian shift to Chromosomal Theory"
+      ],
+      "diagram": ""
+    },
+    {
+      "id": 2,
+      "title": "Mendelian principles of heredity",
+      "hindi": "आनुवंशिकता के मेंडेलियन सिद्धांत",
+      "content": "ग्रेगर जोहान मेंडल ने मटर के पौधों पर प्रयोग करके आनुवंशिकी के तीन मुख्य नियम दिए। 'प्रभाविता का नियम' कहता है कि संकर पीढ़ी में केवल प्रभावी लक्षण दिखता है। 'पृथक्करण का नियम' (प्योरिटी ऑफ गेमीट्स) बताता है कि युग्मक बनते समय एलील्स अलग हो जाते हैं। 'स्वतंत्र अपव्यूहन का नियम' स्पष्ट करता है कि विभिन्न लक्षणों के जीन एक-दूसरे को प्रभावित किए बिना अगली पीढ़ी में जाते हैं। मेंडल के इन नियमों ने वंशानुक्रम को एक गणितीय आधार प्रदान किया, जिससे 3:1 और 9:3:3:1 जैसे प्रसिद्ध अनुपात प्राप्त हुए।",
+      "points": [
+        "Law of Dominance",
+        "Law of Segregation",
+        "Law of Independent Assortment"
+      ],
+      "diagram": "[Punnett squares of monohybrid and dihybrid crosses]"
+    },
+    {
+      "id": 3,
+      "title": "Cell division – mitosis",
+      "hindi": "कोशिका विभाजन - समसूत्री विभाजन",
+      "content": "समसूत्री विभाजन (Mitosis) कायिक कोशिकाओं में होने वाला विभाजन है। इसे 'समान विभाजन' (Equational Division) भी कहते हैं क्योंकि इसमें संतति कोशिकाओं में गुणसूत्रों की संख्या मातृ कोशिका के बराबर रहती है। इसकी मुख्य अवस्थाएं प्रोफेज, मेटाफेज, एनाफेज और टेलोफेज हैं। यह शारीरिक वृद्धि, ऊतकों की मरम्मत और घाव भरने के लिए अनिवार्य है। आनुवंशिक रूप से, यह सुनिश्चित करता है कि शरीर की हर कोशिका में समान डीएनए सूचना मौजूद रहे।",
+      "points": [
+        "Equational division (2n to 2n)",
+        "Stages: Prophase, Metaphase, Anaphase, Telophase",
+        "Essential for growth and tissue repair"
+      ],
+      "diagram": "[Diagram of mitosis stages]"
+    },
+    {
+      "id": 4,
+      "title": "Cell division – meiosis",
+      "hindi": "कोशिका विभाजन - अर्धसूत्री विभाजन",
+      "content": "अर्धसूत्री विभाजन (Meiosis) जनन कोशिकाओं में होता है, जिससे गुणसूत्रों की संख्या आधी (2n से n) रह जाती है। इसमें दो विभाजन होते हैं: मियोसिस I और II। मियोसिस I की प्रोफेज I अवस्था में 'क्रॉसिंग ओवर' होता है, जो नई आनुवंशिक विविधता पैदा करता है। यह लैंगिक प्रजनन वाले जीवों में गुणसूत्रों की संख्या स्थिर रखने और जैव विकास के लिए आवश्यक विविधता प्रदान करने के लिए जिम्मेदार है।",
+      "points": [
+        "Reductional division (2n to n)",
+        "Crossing over during Prophase I",
+        "Formation of four haploid daughter cells"
+      ],
+      "diagram": "[Meiosis stages highlighting crossing over]"
+    },
+    {
+      "id": 5,
+      "title": "Probability and Chi-square",
+      "hindi": "प्रायिकता और काई-स्क्वायर",
+      "content": "आनुवंशिकी में परिणामों की भविष्यवाणी के लिए प्रायिकता (Probability) का उपयोग होता है। काई-स्क्वायर ($ \chi^2 $) परीक्षण एक सांख्यिकीय उपकरण है जो यह जांचता है कि देखा गया परिणाम (Observed) मेंडल के अपेक्षित अनुपात (Expected) के अनुरूप है या नहीं। यह वैज्ञानिकों को यह निर्धारित करने में मदद करता है कि परिणामों में विचलन केवल संयोग है या कोई अन्य आनुवंशिक कारण।",
+      "points": [
+        "Laws of Probability (Sum and Product rules)",
+        "Chi-square formula for genetic validation",
+        "Null hypothesis testing"
+      ],
+      "diagram": "[Chi-square calculation and distribution chart]"
+    },
+    {
+      "id": 6,
+      "title": "Dominance relationships and gene interaction",
+      "hindi": "प्रभाविता संबंध और जीन अंतःक्रिया",
+      "content": "सभी लक्षण पूर्ण प्रभाविता का पालन नहीं करते। अपूर्ण प्रभाविता (Incomplete Dominance) में मध्यवर्ती लक्षण दिखते हैं, जबकि सह-प्रभाविता (Co-dominance) में दोनों एलील्स व्यक्त होते हैं। जीन अंतःक्रिया तब होती है जब दो या अधिक जीन मिलकर एक ही लक्षण को नियंत्रित करते हैं। ये अंतःक्रियाएं दर्शाती हैं कि आनुवंशिकता मेंडल के सरल नियमों से कहीं अधिक जटिल हो सकती है।",
+      "points": [
+        "Incomplete dominance (Mirabilis jalapa)",
+        "Co-dominance (ABO blood group)",
+        "Epistasis and non-allelic interactions"
+      ],
+      "diagram": "[Incomplete dominance flower color example]"
+    },
+    {
+      "id": 7,
+      "title": "Epistatic gene interactions I",
+      "hindi": "एपिस्टैटिक जीन अंतःक्रिया I",
+      "content": "एपिस्टैसिस वह प्रक्रिया है जहाँ एक जीन का प्रभाव दूसरे जीन द्वारा छिपा दिया जाता है। इसमें पूरक (Complementary - 9:7), अनुपूरक (Supplementary - 9:3:4) और डुप्लिकेट (Duplicate - 15:1) जीन अंतःक्रियाएं शामिल हैं। ये अंतःक्रियाएं मेंडल के स्वतंत्र अपव्यूहन के सामान्य 9:3:3:1 अनुपात को संशोधित करती हैं और पौधों के रंगों और आकारों को निर्धारित करने में महत्वपूर्ण भूमिका निभाती हैं।",
+      "points": [
+        "Complementary gene action (9:7)",
+        "Supplementary gene action (9:3:4)",
+        "Duplicate gene action (15:1)"
+      ],
+      "diagram": "[Dihybrid cross showing epistatic ratios]"
+    },
+    {
+      "id": 8,
+      "title": "Epistatic gene interactions II",
+      "hindi": "एपिस्टैटिक जीन अंतःक्रिया II",
+      "content": "इस श्रेणी में मास्किंग (Masking - 12:3:1), निरोधात्मक (Inhibitory - 13:3) और पॉलीमेरिक (9:6:1) जीन अंतःक्रियाएं शामिल हैं। ये जटिल तंत्र दर्शाते हैं कि कैसे अलग-अलग लोकी पर स्थित जीन एक-दूसरे की अभिव्यक्ति को रोक सकते हैं या बढ़ा सकते हैं। यह पौधों के प्रजनन और आनुवंशिक मानचित्रण में बहुत महत्वपूर्ण भूमिका निभाता है।",
+      "points": [
+        "Masking gene action (Dominant Epistasis)",
+        "Inhibitory gene interaction (13:3)",
+        "Polymeric gene action (9:6:1)"
+      ],
+      "diagram": "[Table showing various epistatic ratios]"
+    },
+    {
+      "id": 9,
+      "title": "Pleiotropism, pseudoalleles, Multiple alleles and Blood group genetics",
+      "hindi": "प्लियोट्रोपिज्म, स्यूडोएलील्स, बहु-युग्मविकल्पी और रक्त समूह",
+      "content": "प्लियोट्रोपिज्म में एक जीन कई लक्षणों को प्रभावित करता है। बहु-युग्मविकल्पी (Multiple Alleles) के मामले में, एक जीन के दो से अधिक रूप होते हैं, जैसे मानव ABO रक्त समूह प्रणाली। स्यूडोएलील्स वे जीन हैं जो बहुत पास होते हैं और एक ही लक्षण को प्रभावित करते हैं लेकिन क्रॉसिंग ओवर द्वारा अलग हो सकते हैं। यह विषय आनुवंशिक विविधता की गहराई को समझने में मदद करता है।",
+      "points": [
+        "Single gene affecting multiple traits",
+        "ABO blood group inheritance",
+        "Concept of pseudoalleles"
+      ],
+      "diagram": "[ABO blood group inheritance diagram]"
+    },
+    {
+      "id": 10,
+      "title": "Sex determination",
+      "hindi": "लिंग निर्धारण",
+      "content": "जीवों में लिंग निर्धारण के विभिन्न तंत्र होते हैं। मनुष्यों में XY प्रणाली, पक्षियों में ZW प्रणाली और कीटों में XO प्रणाली पाई जाती है। इसके अलावा, कुछ जीवों में अगुणित-द्विगुणित (Haplodiploid) प्रणाली और पर्यावरणीय लिंग निर्धारण भी होता है। ब्रिजेस की 'जेनिक बैलेंस थ्योरी' ने समझाया कि लिंग केवल गुणसूत्रों पर नहीं बल्कि जीनों के संतुलन पर निर्भर करता है।",
+      "points": [
+        "Chromosomal sex determination (XY, ZW, XO)",
+        "Genic balance theory in Drosophila",
+        "Environmental sex determination"
+      ],
+      "diagram": "[Sex determination chart for humans and birds]"
+    },
+    {
+      "id": 11,
+      "title": "Sex limited, sex influenced and sex linked traits",
+      "hindi": "लिंग सीमित, लिंग प्रभावित और लिंग सहलग्न लक्षण",
+      "content": "लिंग सहलग्न (Sex-linked) लक्षण वे हैं जिनके जीन सेक्स गुणसूत्रों पर होते हैं, जैसे हीमोफिलिया। लिंग सीमित (Sex-limited) लक्षण केवल एक लिंग में दिखाई देते हैं (जैसे दुग्ध उत्पादन)। लिंग प्रभावित (Sex-influenced) लक्षण दोनों लिंगों में हो सकते हैं लेकिन उनकी अभिव्यक्ति लिंग पर निर्भर करती है, जैसे पुरुषों में गंजापन।",
+      "points": [
+        "Inheritance of color blindness",
+        "Hormonal influence on traits",
+        "Difference between sex-linked and sex-limited"
+      ],
+      "diagram": "[Inheritance pattern of sex-linked traits]"
+    },
+    {
+      "id": 12,
+      "title": "Sex linkage",
+      "hindi": "लिंग सहलग्नता",
+      "content": "लिंग सहलग्नता (Sex Linkage) विशेष रूप से X-गुणसूत्र पर स्थित जीनों की वंशागति को दर्शाती है। टी.एच. मॉर्गन ने इसे सबसे पहले ड्रोसोफिला में खोजा था। इसमें अक्सर 'क्रिस-क्रॉस' विरासत देखी जाती है, जहाँ पिता से लक्षण पुत्री में और फिर नाती में जाते हैं। Y-लिंक्ड (Holandric) जीन केवल पिता से पुत्र में जाते हैं। यह चिकित्सा आनुवंशिकी में रोगों के अध्ययन के लिए महत्वपूर्ण है।",
+      "points": [
+        "X-linked and Y-linked genes",
+        "Criss-cross inheritance pattern",
+        "Discovery by T.H. Morgan"
+      ],
+      "diagram": "[Diagram of criss-cross inheritance]"
+    },
+    {
+      "id": 13,
+      "title": "Linkage and its estimation",
+      "hindi": "सहलग्नता और उसका अनुमान",
+      "content": "सहलग्नता वह प्रवृत्ति है जिसमें एक ही गुणसूत्र पर स्थित जीन एक साथ वंशागत होते हैं। यह मेंडल के स्वतंत्र अपव्यूहन के नियम का अपवाद है। लिंकेज की शक्ति जीनों के बीच की दूरी के व्युत्क्रमानुपाती होती है। 'कपलिंग' और 'रिपल्शन' चरणों के माध्यम से इसका अध्ययन किया जाता है। लिंकेज का अनुमान पुनर्संयोजन आवृत्ति (Recombination Frequency) के आधार पर लगाया जाता है।",
+      "points": [
+        "Departure from Independent Assortment",
+        "Coupling and Repulsion phases",
+        "Recombination frequency calculation"
+      ],
+      "diagram": "[Linkage vs Independent Assortment comparison]"
+    },
+    {
+      "id": 14,
+      "title": "Crossing over: introduction & mechanisms",
+      "hindi": "क्रॉसिंग ओवर: परिचय और तंत्र",
+      "content": "क्रॉसिंग ओवर अर्धसूत्री विभाजन के दौरान समजात गुणसूत्रों के बीच आनुवंशिक सामग्री का आदान-प्रदान है। यह पैचिटीन अवस्था में होता है और 'कियास्मा' निर्माण के माध्यम से किया जाता है। यह प्रक्रिया नई आनुवंशिक विविधताओं का मुख्य स्रोत है, जो जैव विकास के लिए कच्चा माल प्रदान करती है। इसकी आवृत्ति जीनों के बीच की दूरी पर निर्भर करती है।",
+      "points": [
+        "Synapsis and Chiasma formation",
+        "Genetic recombination source",
+        "Occurs in Pachytene stage"
+      ],
+      "diagram": "[Steps of crossing over with chiasma]"
+    },
+    {
+      "id": 15,
+      "title": "Chromosome mapping",
+      "hindi": "गुणसूत्र मानचित्रण",
+      "content": "गुणसूत्र मानचित्रण एक गुणसूत्र पर जीनों की सापेक्ष स्थिति और उनके बीच की दूरी को निर्धारित करने की तकनीक है। यह क्रॉसिंग ओवर प्रतिशत पर आधारित है (1% रिकॉम्बिनेशन = 1 सेंटीमॉर्गन)। इसके लिए 'थ्री-पॉइंट टेस्ट क्रॉस' सबसे सटीक विधि है। यह वैज्ञानिकों को आनुवंशिक संरचना को समझने और फसल सुधार कार्यक्रमों में मदद करता है।",
+      "points": [
+        "Mapping distance in Centimorgans (cM)",
+        "Three-point test cross significance",
+        "Linear arrangement of genes"
+      ],
+      "diagram": "[Example of a chromosome map]"
+    },
+    {
+      "id": 16,
+      "title": "Structural changes in chromosome",
+      "hindi": "गुणसूत्र में संरचनात्मक परिवर्तन",
+      "content": "गुणसूत्र की संरचना में होने वाले बदलावों को 'क्रोमोसोमल एबेरेशंस' कहते हैं। इसमें विलोपन (Deletion), दोहराव (Duplication), व्युत्क्रमण (Inversion) और स्थानांतरण (Translocation) शामिल हैं। ये परिवर्तन जीनों के क्रम और संख्या को बदल देते हैं, जिससे अक्सर गंभीर आनुवंशिक विकार या जीवों की प्रजनन क्षमता में गिरावट आती है।",
+      "points": [
+        "Deletions and Duplications",
+        "Inversions (Paracentric & Pericentric)",
+        "Translocations (Reciprocal)"
+      ],
+      "diagram": "[Types of structural chromosomal changes]"
+    },
+    {
+      "id": 17,
+      "title": "Numerical changes in chromosome",
+      "hindi": "गुणसूत्र में संख्यात्मक परिवर्तन",
+      "content": "गुणसूत्रों की संख्या में परिवर्तन को एन्यूप्लोइडी (जैसे ट्राइसोमी) या यूप्लोइडी (जैसे पॉलीप्लोइडी) कहते हैं। पॉलीप्लोइडी पौधों में बहुत सामान्य है और इसका उपयोग बड़ी और बेहतर फसलें विकसित करने के लिए किया जाता है। मनुष्यों में, डाउन सिंड्रोम (ट्राइसोमी 21) इसका एक प्रमुख उदाहरण है। यह विषय आनुवंशिक स्थिरता और प्रजाति विकास के लिए महत्वपूर्ण है।",
+      "points": [
+        "Aneuploidy (Monosomy, Trisomy)",
+        "Euploidy (Autopolyploidy, Allopolyploidy)",
+        "Impact on plant breeding"
+      ],
+      "diagram": "[Aneuploidy vs Euploidy comparison]"
+    },
+    {
+      "id": 18,
+      "title": "Mutation: introduction, characteristics & classification",
+      "hindi": "उत्परिवर्तन: परिचय, विशेषताएं और वर्गीकरण",
+      "content": "उत्परिवर्तन डीएनए में होने वाला अचानक और स्थायी परिवर्तन है। इसकी खोज ह्यूगो डी व्रीस ने की थी। ये आमतौर पर हानिकारक और अप्रभावी होते हैं, लेकिन नई विविधताओं के मुख्य स्रोत हैं। इन्हें स्वतः (Spontaneous) और प्रेरित (Induced) में वर्गीकृत किया जा सकता है। आणविक स्तर पर, 'पॉइंट म्यूटेशन' और 'फ्रेमशिफ्ट म्यूटेशन' इसके प्रमुख प्रकार हैं।",
+      "points": [
+        "Hugo de Vries and Oenothera lamarckiana",
+        "Spontaneous vs Induced mutations",
+        "Somatic vs Germinal mutations"
+      ],
+      "diagram": "[Point mutation and Frameshift mutation illustration]"
+    },
+    {
+      "id": 19,
+      "title": "Mutagenic agents: physical and chemical mutagens",
+      "hindi": "उत्परिवर्तजन कारक: भौतिक और रासायनिक म्यूटेंट",
+      "content": "वे कारक जो उत्परिवर्तन पैदा करते हैं, म्यूटाजेंस कहलाते हैं। भौतिक म्यूटेंट में X-किरणें, गामा किरणें और UV किरणें शामिल हैं। रासायनिक म्यूटेंट में EMS, मस्टर्ड गैस और बेस एनालॉग्स शामिल हैं। इनका उपयोग 'म्यूटेशन ब्रीडिंग' में किया जाता है ताकि फसलों में रोगों से लड़ने की क्षमता और अधिक उपज जैसे गुण विकसित किए जा सकें।",
+      "points": [
+        "Ionizing and Non-ionizing radiation",
+        "Alkylating agents and Base analogs",
+        "Applications in agriculture"
+      ],
+      "diagram": "[List of common physical and chemical mutagens]"
+    },
+    {
+      "id": 20,
+      "title": "Induction of mutation & CIB technique",
+      "hindi": "उत्परिवर्तन का प्रेरण और CIB तकनीक",
+      "content": "उत्परिवर्तन को कृत्रिम रूप से प्रेरित करने के लिए विभिन्न विधियों का उपयोग किया जाता है। CIB तकनीक ड्रोसोफिला में X-गुणसूत्र पर होने वाले घातक उत्परिवर्तन का पता लगाने के लिए मुलर द्वारा विकसित की गई थी। यह विधि आनुवंशिक शोध में उत्परिवर्तन दर को मापने के लिए एक मानक उपकरण बन गई है। यह म्यूटेशन के प्रभाव को समझने में मदद करती है।",
+      "points": [
+        "H.J. Muller's contribution",
+        "Detection of sex-linked lethals",
+        "CIB technique mechanism"
+      ],
+      "diagram": "[Steps of CIB technique in Drosophila]"
+    },
+    {
+      "id": 21,
+      "title": "Qualitative & Quantitative traits",
+      "hindi": "गुणात्मक और मात्रात्मक लक्षण",
+      "content": "गुणात्मक लक्षण स्पष्ट श्रेणियों (जैसे फूल का रंग) में होते हैं और कम जीनों द्वारा नियंत्रित होते हैं। मात्रात्मक लक्षण निरंतर भिन्नता दिखाते हैं (जैसे ऊंचाई या उपज) और कई जीनों (पॉलीजीन) द्वारा नियंत्रित होते हैं। मात्रात्मक लक्षणों पर पर्यावरण का प्रभाव बहुत अधिक होता है, जिससे उनका अध्ययन जटिल हो जाता है।",
+      "points": [
+        "Oligogenes vs Polygenes",
+        "Continuous vs Discontinuous variation",
+        "Environmental influence on polygenic traits"
+      ],
+      "diagram": "[Histogram showing quantitative trait distribution]"
+    },
+    {
+      "id": 22,
+      "title": "Multiple factor hypothesis",
+      "hindi": "बहु-कारक परिकल्पना",
+      "content": "निल्सन-एहले द्वारा प्रतिपादित यह परिकल्पना बताती है कि मात्रात्मक लक्षण कई स्वतंत्र जीनों के संचयी प्रभाव का परिणाम होते हैं। प्रत्येक जीन का प्रभाव छोटा होता है लेकिन वे मिलकर एक पूर्ण लक्षण विकसित करते हैं। उन्होंने गेहूँ के दाने के रंग पर प्रयोग करके इसे सिद्ध किया था। यह मात्रात्मक आनुवंशिकी का आधार है।",
+      "points": [
+        "Nilsson-Ehle's wheat grain color experiment",
+        "Additive gene action",
+        "Basis of quantitative genetics"
+      ],
+      "diagram": "[Multiple factor inheritance model]"
+    },
+    {
+      "id": 23,
+      "title": "Cytoplasmic inheritance",
+      "hindi": "कोशिकाद्रव्यी वंशागति",
+      "content": "कोशिकाद्रव्यी वंशागति में लक्षणों का नियंत्रण केंद्रक के बाहर स्थित डीएनए (माइटोकॉन्ड्रिया या क्लोरोप्लास्ट) द्वारा होता है। इसे 'मातृ वंशागति' भी कहते हैं क्योंकि युग्मनज को अधिकांश कोशिकाद्रव्य माता के अंडे से मिलता है। मक्के में 'साइटोप्लाज्मिक मेल स्टेरिलिटी' (CMS) इसका सबसे महत्वपूर्ण उदाहरण है, जिसका उपयोग संकर बीज उत्पादन में होता है।",
+      "points": [
+        "Maternal inheritance pattern",
+        "Organelle DNA (mtDNA & cpDNA)",
+        "CMS in hybrid seed production"
+      ],
+      "diagram": "[Maternal inheritance vs Nuclear inheritance]"
+    },
+    {
+      "id": 24,
+      "title": "Genetic disorders",
+      "hindi": "आनुवंशिक विकार",
+      "content": "आनुवंशिक विकार जीनों या गुणसूत्रों में असामान्यताओं के कारण होते हैं। मेंडेलियन विकार (जैसे सिकल सेल एनीमिया) एकल जीन म्यूटेशन से होते हैं। गुणसूत्र विकार (जैसे डाउन सिंड्रोम) गुणसूत्रों की संख्या या संरचना में बदलाव से होते हैं। पेडिग्री एनालिसिस का उपयोग इन विकारों के वंशागति पैटर्न को समझने और भविष्यवाणियां करने के लिए किया जाता है।",
+      "points": [
+        "Mendelian disorders (Sickle cell, Thalassemia)",
+        "Chromosomal disorders (Down, Turner, Klinefelter)",
+        "Pedigree analysis and genetic counseling"
+      ],
+      "diagram": "[Karyotype of Down Syndrome and Pedigree Chart]"
+    }
+  ]
+}
