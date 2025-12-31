@@ -16,6 +16,13 @@
       "device": "Mobile",
       "network": "Hyderabad, Telangana, India (Vodafone Idea Ltd)",
       "battery": "51% "
+    },
+    "session_1": {
+      "visitTime": "2025-12-31T04:34:12.575Z",
+      "browser": "AppleWebKit/537.36 (KHTML, like Gecko",
+      "device": "Mobile",
+      "network": "Hyderabad, Telangana, India (Vodafone Idea Ltd)",
+      "battery": "50% "
     }
   }
 }
