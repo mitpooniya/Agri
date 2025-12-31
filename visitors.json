@@ -8,5 +8,14 @@
       "visitTime": "30/12/2025, 16:58:11",
       "browser": "Google Chrome"
     }
+  },
+  "42.107.224.96": {
+    "session_0": {
+      "visitTime": "2025-12-31T04:31:16.043Z",
+      "browser": "AppleWebKit/537.36 (KHTML, like Gecko",
+      "device": "Mobile",
+      "network": "Hyderabad, Telangana, India (Vodafone Idea Ltd)",
+      "battery": "51% "
+    }
   }
 }
