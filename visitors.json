@@ -24,5 +24,16 @@
       "network": "Hyderabad, Telangana, India (Vodafone Idea Ltd)",
       "battery": "50% "
     }
+  },
+  "uid-mhn7pc20l-1767156154484": {
+    "session_0": {
+      "timestamp_ms": 1767156155406,
+      "ip": "2402:3a80:d54:7019:0:1:ccf4:7201",
+      "browser": "Google Chrome",
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "device": "Mobile",
+      "battery": "46%"
+    }
   }
 }
