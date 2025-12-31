@@ -53,5 +53,16 @@
       "device": "Mobile",
       "battery": "44%"
     }
+  },
+  "uid-ulf47leoy-1767156746497": {
+    "session_0": {
+      "timestamp_ms": 1767156747030,
+      "ip": "2402:3a80:d54:7019:0:1:ccf4:7201",
+      "browser": "Google Chrome",
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "device": "Mobile",
+      "battery": "42%"
+    }
   }
 }
