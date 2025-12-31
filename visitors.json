@@ -90,6 +90,15 @@
       "district": "Hyderabad",
       "device": "Mobile",
       "battery": "38%"
+    },
+    "session_4": {
+      "timestamp_ms": 1767157365433,
+      "ip": "2402:3a80:d54:7019:0:1:ccf4:7201",
+      "browser": "Google Chrome",
+      "state": "Telangana",
+      "district": "Hyderabad",
+      "device": "Mobile",
+      "battery": "38%"
     }
   }
 }
